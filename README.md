@@ -1,7 +1,7 @@
 ioos.github.io
 ==============
 
-IOOS github pages are entry point for technical documentation
+IOOS github pages are the entry point for technical documentation
 
 # Initial navigation structure
 * Projects and Software Development Activities
@@ -49,4 +49,11 @@ Includes the following:
 ## Asset Identifiers 
 
 ## Vocabularies
+
+# About
+
+## Website generation, installation and updating
+
+The website will be transitioned to Hugo for creation and regeneration, at
+least until we decide that Hugo is not the appropriate vehicle to do this.
 
