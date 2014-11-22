@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+      <title>Recent Content on IOOS GitHub Site </title>
+      <generator uri="https://hugo.spf13.com">Hugo</generator>
+    <link>http://duncombe.github.io/index.xml</link>
+    <language>en-us</language>
+    
+    
+    <updated>Tue, 01 Jan 2008 00:00:00 UTC</updated>
+    
+    <item>
+      <title></title>
+      <link>http://duncombe.github.io/</link>
+      <pubDate>Tue, 01 Jan 2008 00:00:00 UTC</pubDate>
+      
+      <guid>http://duncombe.github.io/</guid>
+      <description>
+
+&lt;h1 id=&#34;toc_0&#34;&gt;ioos.github.io&lt;/h1&gt;
+
+&lt;p&gt;IOOS GitHub pages are the entry point for technical documentation.&lt;/p&gt;
+
+&lt;h1 id=&#34;toc_1&#34;&gt;Initial navigation structure&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Projects and Software Development Activities
+
+&lt;ul&gt;
+&lt;li&gt;System Integration Test&lt;/li&gt;
+&lt;li&gt;ncSOS&lt;/li&gt;
+&lt;li&gt;i52N and related activities like sensor web harvesters&lt;/li&gt;
+&lt;li&gt;pyoos&lt;/li&gt;
+&lt;li&gt;compliance-checker&lt;/li&gt;
+&lt;li&gt;registry&lt;/li&gt;
+&lt;li&gt;catalog&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Guidelines and specifications
+
+&lt;ul&gt;
+&lt;li&gt;Data Provider Guidelines&lt;/li&gt;
+&lt;li&gt;SOS Guidelines&lt;/li&gt;
+&lt;li&gt;netCDF Guidelines&lt;/li&gt;
+&lt;li&gt;ioos-csv-tsv&lt;/li&gt;
+&lt;li&gt;asset identifiers&lt;/li&gt;
+&lt;li&gt;vocabularies&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;About  (Not sure about this yet)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;toc_2&#34;&gt;Projects&lt;/h1&gt;
+
+&lt;h2 id=&#34;toc_3&#34;&gt;System Integration Test&lt;/h2&gt;
+
+&lt;h2 id=&#34;toc_4&#34;&gt;ncSOS&lt;/h2&gt;
+
+&lt;h2 id=&#34;toc_5&#34;&gt;i52N and related activities like sensor web harvesters&lt;/h2&gt;
+
+&lt;h1 id=&#34;toc_6&#34;&gt;Guidelines and specifications&lt;/h1&gt;
+
+&lt;h2 id=&#34;toc_7&#34;&gt;Data Provider Guidelines&lt;/h2&gt;
+
+&lt;p&gt;What are the responsiblities of an IOOS Data Provider? This page should be
+based on [&lt;a href=&#34;http://www.ioos.noaa.gov/data/contribute_data.html&#34;&gt;http://www.ioos.noaa.gov/data/contribute_data.html&lt;/a&gt;].&lt;/p&gt;
+
+&lt;h2 id=&#34;toc_8&#34;&gt;SOS Guidelines&lt;/h2&gt;
+
+&lt;p&gt;Includes the following:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Overview of SOS activities in IOOS based on Alex&amp;rsquo;s one page summary&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;WSDD&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Templates&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Testing/Compliance&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;toc_9&#34;&gt;netCDF and/or opendap guidelines&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;See github.com/dpsnowden/netcdf-guidelines for some initial ideas on what
+this needs to contain.&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;toc_10&#34;&gt;ioos-csv-tsv&lt;/h2&gt;
+
+&lt;h2 id=&#34;toc_11&#34;&gt;Asset Identifiers&lt;/h2&gt;
+
+&lt;h2 id=&#34;toc_12&#34;&gt;Vocabularies&lt;/h2&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://duncombe.github.io/website-install</link>
+      <pubDate>Tue, 01 Jan 2008 00:00:00 UTC</pubDate>
+      
+      <guid>http://duncombe.github.io/website-install</guid>
+      <description>
+
+&lt;h1 id=&#34;toc_0&#34;&gt;About&lt;/h1&gt;
+
+&lt;h2 id=&#34;toc_1&#34;&gt;IOOS&lt;/h2&gt;
+
+&lt;h2 id=&#34;toc_2&#34;&gt;Website generation, installation and updating&lt;/h2&gt;
+
+&lt;p&gt;The website will be transitioned to Hugo for creation and regeneration, at
+least until we decide that Hugo is not the appropriate vehicle to do this.&lt;/p&gt;
+
+&lt;p&gt;The website will initially rely on Hugo for creation and deployment.  I will
+try to have the top level document appear in both the GitHub &lt;code&gt;README.md&lt;/code&gt; and
+the website&amp;rsquo;s &lt;code&gt;index.html&lt;/code&gt;.  The way this is accomplished is to sym-link the
+README.md to index.md in the content subdirectory. Thus Hugo creates
+&lt;code&gt;index.html&lt;/code&gt; in public, while the same document still appears in the GitHub
+repository.  Scripts like &lt;code&gt;stats.sh&lt;/code&gt; and Windows users need to be aware of the
+sym-link so that they preserve it and the relationship between the files.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_3&#34;&gt;Creating the website&lt;/h3&gt;
+
+&lt;p&gt;There was a Jekyll generated website lurking here. That was removed and a blank
+Hugo website was created with the original &lt;code&gt;README.md&lt;/code&gt;.  The following commands
+do this, and preserve the repository history and information in
+&lt;code&gt;ioos.github.io/.git&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;mv -i ioos.github.io/README.md
+rm -rf ioos.github.io/* 
+cd ioos.github.io/
+mkdir {archetypes,content,layouts,static}
+(  echo &#39;baseurl = &amp;quot;http://ioos.github.io&amp;quot;&#39; 
+   echo &#39;languageCode = &amp;quot;en-us&amp;quot;&#39;
+   ) &amp;gt; config.toml
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In order to use the &lt;code&gt;README.md&lt;/code&gt; as an &lt;code&gt;index.html&lt;/code&gt; page, a sym-link was made.
+It works better on GitHub if the README.md is the file and the index.md is the
+link. Some care must be taken to ensure Hugo knows that things have changed
+when the README.md is modified.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;ln -s ../README.md content/index.md 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The Hyde theme was cloned in and the relevant subdirectories copied to the
+blank site.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git clone --recursive https://github.com/spf13/hyde.git themes/hyde 
+rsync -auvi themes/hyde/{archetypes,layouts,static} .
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now we run Hugo as a server so we can see how things change as we
+edit the layouts and pages to how we want them.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;hugo server --theme=hyde --buildDrafts
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;toc_4&#34;&gt;Regeneration&lt;/h3&gt;
+
+&lt;p&gt;The following commands should be run to recompile the documentation and
+update the website after changes have been made.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;
+# run hugo to build the website
+hugo
+
+# add and commit everything that changed
+git add -A
+git commit -m &amp;quot;Update website `date`&amp;quot; 
+git push
+
+# you may need to synchronize the remote and local gh-pages branches, in
+# which case this may be required (origin is the appropriate remote
+# repository):
+# git subtree pull --prefix=public origin gh-pages
+#
+# but this usually (sometimes) works by itself. Note that since this is a
+# top-level github.io site, the master is the btranch that must be pushed to,
+# the gh-pages branch is ignored here.
+git subtree push --prefix=public origin master
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;!-- vi:se nowrap tw=0: --&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
