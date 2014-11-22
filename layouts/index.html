@@ -1,26 +1,40 @@
-{{ partial "head.html" . }}
+{{ template "chrome/head.html" . }}
 <body>
 
-{{ partial "sidebar.html" . }}
+{{ template "chrome/sidebar.html" . }}
 
     <div class="content container">
-<div class="posts">
 
-      {{ range .Data.Pages }}
+	<div class="posts">
+
+	{{ range .Data.Pages }}
+	{{ end }}
+ 
   <div class="post">
-    <h1 class="post-title">
-      <a href="{{ .Permalink }}">
-        {{ .Title }}
-      </a>
-    </h1>
 
-    <span class="post-date">{{ .Date.Format "Mon, Jan 2, 2006" }}</span>
+	{{ range .Data.Pages }}
 
-    {{ .Content }}
-  </div>
-  {{ end }}
+    <header>
+      <h2><a href='{{ .Permalink }}'> {{ .Title }}</a> </h2>
+    <!--  <div class="meta">{{ .Date.Format "Mon, Jan 2, 2006" }}</div> -->
+    </header>
+
+
+	{{ if ( eq .RelPermalink "/" ) }} 
+		{{ .Content }}
+	{{end}}
+
+    <footer>
+        <!--a href='{{ .Permalink }}'><nobr><i>Read more ></i></nobr></a-->
+    </footer>
+
+	{{ end }}
+
+	</div>
+
+
 </div>
-</div>
+
 
   </body>
 </html>

@@ -10,9 +10,9 @@
   <title> IOOS GitHub Site &middot; IOOS GitHub Site </title>
 
   
-  <link rel="stylesheet" href="http://ioos.github.io/css/poole.css">
-  <link rel="stylesheet" href="http://ioos.github.io/css/syntax.css">
-  <link rel="stylesheet" href="http://ioos.github.io/css/hyde.css">
+  <link rel="stylesheet" href="http://localhost:1313/css/poole.css">
+  <link rel="stylesheet" href="http://localhost:1313/css/syntax.css">
+  <link rel="stylesheet" href="http://localhost:1313/css/hyde.css">
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
 
   
@@ -20,13 +20,17 @@
   <link rel="shortcut icon" href="/favicon.ico">
 
   
-  <link href="http://ioos.github.io/index.xml/" rel="alternate" type="application/rss+xml" title="IOOS GitHub Site" />
+  <link href="http://localhost:1313/index.xml" rel="alternate" type="application/rss+xml" title="IOOS GitHub Site" />
 </head>
+
 
 <body>
 
 <div class="sidebar">
-  <div class="container sidebar-sticky">
+   	<p>  <img src="http://localhost:1313/images/ioos_blue2.png"
+   	alt="ioos_blue2.png"> </p> 
+
+	<div class="container sidebar-sticky">
     <div class="sidebar-about">
       <h1>IOOS GitHub Site</h1>
       <p class="lead">
@@ -34,30 +38,44 @@
       </p>
     </div>
 
+
     <ul class="sidebar-nav">
-      <li><a href="/">Home</a> </li>
+	  <li><a href="http://localhost:1313">glossary home</a> </li>
+	  <li><a href="http://localhost:1313/website-install/">about glossary</a> </li>
+	  <li><a href="https://github.com/duncombe/glossary">glossary on github</a> </li>
+	  <li><a href="http://ioos.github.io" target="_blank">IOOS github pages</a> </li>
       
     </ul>
 
-    <p>(C) 2014 Integrated Ocean Observing System. Copyright reserved.</p>
+	
+
+	
+  
+
+	<p>(C) 2014 Integrated Ocean Observing System. Rights reserved.</p>
   </div>
 </div>
 
 
     <div class="content container">
-<div class="posts">
 
-      
+	<div class="posts">
+
+	
+	
+ 
   <div class="post">
-    <h1 class="post-title">
-      <a href="http://ioos.github.io/">
-        
-      </a>
-    </h1>
 
-    <span class="post-date">Tue, Jan 1, 2008</span>
+	
 
+    <header>
+      <h2><a href='http://localhost:1313/'> </a> </h2>
     
+    </header>
+
+
+	 
+		
 
 <h1 id="toc_0">ioos.github.io</h1>
 
@@ -161,21 +179,23 @@ mkdir {archetypes,content,layouts,static}
    ) &gt; config.toml
 </code></pre>
 
-<p>In order to use the <code>README.md</code> as an <code>index.html</code> page, a sym-link was made:</p>
+<p>In order to use the <code>README.md</code> as an <code>index.html</code> page, a sym-link was made.
+It works better on GitHub if the README.md is the file and the index.md is the
+link. Some care must be taken to ensure Hugo knows that things have changed
+when the README.md is modified.</p>
 
-<pre><code>mv -i README.md content/index.md
-ln -s content/index.md README.md
+<pre><code>ln -s ../README.md content/index.md 
 </code></pre>
 
 <p>The Hyde theme was cloned in and the relevant subdirectories copied to the
 blank site.</p>
 
 <pre><code>git clone --recursive https://github.com/spf13/hyde.git themes/hyde 
-rsync -nauvi themes/hyde/{archetypes,layouts,static} .
+rsync -auvi themes/hyde/{archetypes,layouts,static} .
 
 </code></pre>
 
-<p>Now we run Hugo as a server so we can see how thinkgs change as we
+<p>Now we run Hugo as a server so we can see how things change as we
 edit the layouts and pages to how we want them.</p>
 
 <pre><code>hugo server --theme=hyde --buildDrafts
@@ -199,17 +219,32 @@ git push
 # which case this may be required (origin is the appropriate remote
 # repository):
 # git subtree pull --prefix=public origin gh-pages
-# but this usually (sometimes) works by itself:
-git subtree push --prefix=public origin gh-pages
+#
+# but this usually (sometimes) works by itself. Note that since this is a
+# top-level github.io site, the master is the btranch that must be pushed to,
+# the gh-pages branch is ignored here.
+git subtree push --prefix=public origin master
 
 </code></pre>
 
 <!-- vi:se nowrap tw=0: -->
 
-  </div>
-  
-</div>
+	
+
+    <footer>
+        
+    </footer>
+
+	
+
+	</div>
+
+
 </div>
 
-  </body>
+
+  <script>document.write('<script src="http://'
+        + (location.host || 'localhost').split(':')[0]
+		+ ':1313/livereload.js?mindelay=10"></'
+        + 'script>')</script></body>
 </html>

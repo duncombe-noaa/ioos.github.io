@@ -3,7 +3,7 @@
   <channel>
       <title>Recent Content on IOOS GitHub Site </title>
       <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>http://ioos.github.io/index.xml/</link>
+    <link>http://localhost:1313/index.xml</link>
     <language>en-us</language>
     
     
@@ -11,10 +11,10 @@
     
     <item>
       <title></title>
-      <link>http://ioos.github.io/</link>
+      <link>http://localhost:1313/</link>
       <pubDate>Tue, 01 Jan 2008 00:00:00 UTC</pubDate>
       
-      <guid>http://ioos.github.io/</guid>
+      <guid>http://localhost:1313/</guid>
       <description>
 
 &lt;h1 id=&#34;toc_0&#34;&gt;ioos.github.io&lt;/h1&gt;
@@ -119,21 +119,23 @@ mkdir {archetypes,content,layouts,static}
    ) &amp;gt; config.toml
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;In order to use the &lt;code&gt;README.md&lt;/code&gt; as an &lt;code&gt;index.html&lt;/code&gt; page, a sym-link was made:&lt;/p&gt;
+&lt;p&gt;In order to use the &lt;code&gt;README.md&lt;/code&gt; as an &lt;code&gt;index.html&lt;/code&gt; page, a sym-link was made.
+It works better on GitHub if the README.md is the file and the index.md is the
+link. Some care must be taken to ensure Hugo knows that things have changed
+when the README.md is modified.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;mv -i README.md content/index.md
-ln -s content/index.md README.md
+&lt;pre&gt;&lt;code&gt;ln -s ../README.md content/index.md 
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;The Hyde theme was cloned in and the relevant subdirectories copied to the
 blank site.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;git clone --recursive https://github.com/spf13/hyde.git themes/hyde 
-rsync -nauvi themes/hyde/{archetypes,layouts,static} .
+rsync -auvi themes/hyde/{archetypes,layouts,static} .
 
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Now we run Hugo as a server so we can see how thinkgs change as we
+&lt;p&gt;Now we run Hugo as a server so we can see how things change as we
 edit the layouts and pages to how we want them.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;hugo server --theme=hyde --buildDrafts
@@ -157,8 +159,11 @@ git push
 # which case this may be required (origin is the appropriate remote
 # repository):
 # git subtree pull --prefix=public origin gh-pages
-# but this usually (sometimes) works by itself:
-git subtree push --prefix=public origin gh-pages
+#
+# but this usually (sometimes) works by itself. Note that since this is a
+# top-level github.io site, the master is the btranch that must be pushed to,
+# the gh-pages branch is ignored here.
+git subtree push --prefix=public origin master
 
 &lt;/code&gt;&lt;/pre&gt;
 
