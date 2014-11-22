@@ -40,10 +40,11 @@
 
 
     <ul class="sidebar-nav">
-	  <li><a href="http://localhost:1313">glossary home</a> </li>
-	  <li><a href="http://localhost:1313/website-install/">about glossary</a> </li>
-	  <li><a href="https://github.com/duncombe/glossary">glossary on github</a> </li>
-	  <li><a href="http://ioos.github.io" target="_blank">IOOS github pages</a> </li>
+	  <li><a href="http://localhost:1313">home</a> </li>
+	  <li><a href="http://localhost:1313/website-install/">about the site</a> </li>
+	  <li><a href="https://github.com/ioos/ioos.github.io" target="_blank">website repository</a> </li>
+	  <li><a href="http://github.com/ioos/" target="_blank">IOOS
+	  development pages</a> </li>
       
     </ul>
 
@@ -63,6 +64,7 @@
 
 	
 	
+	
  
   <div class="post">
 
@@ -72,7 +74,6 @@
       <h2><a href='http://localhost:1313/'> </a> </h2>
     
     </header>
-
 
 	 
 		
@@ -148,86 +149,18 @@ this needs to contain.</li>
 
 <h2 id="toc_12">Vocabularies</h2>
 
-<h1 id="toc_13">About</h1>
+	
 
-<h2 id="toc_14">Website generation, installation and updating</h2>
+    <footer>
+        
+    </footer>
 
-<p>The website will be transitioned to Hugo for creation and regeneration, at
-least until we decide that Hugo is not the appropriate vehicle to do this.</p>
+	
 
-<p>The website will initially rely on Hugo for creation and deployment.  I will
-try to have the top level document appear in both the GitHub <code>README.md</code> and
-the website&rsquo;s <code>index.html</code>.  The way this is accomplished is to sym-link the
-README.md to index.md in the content subdirectory. Thus Hugo creates
-<code>index.html</code> in public, while the same document still appears in the GitHub
-repository.  Scripts like <code>stats.sh</code> and Windows users need to be aware of the
-sym-link so that they preserve it and the relationship between the files.</p>
-
-<h3 id="toc_15">Creating the website</h3>
-
-<p>There was a Jekyll generated website lurking here. That was removed and a blank
-Hugo website was created with the original <code>README.md</code>.  The following commands
-do this, and preserve the repository history and information in
-<code>ioos.github.io/.git</code></p>
-
-<pre><code>mv -i ioos.github.io/README.md
-rm -rf ioos.github.io/* 
-cd ioos.github.io/
-mkdir {archetypes,content,layouts,static}
-(  echo 'baseurl = &quot;http://ioos.github.io&quot;' 
-   echo 'languageCode = &quot;en-us&quot;'
-   ) &gt; config.toml
-</code></pre>
-
-<p>In order to use the <code>README.md</code> as an <code>index.html</code> page, a sym-link was made.
-It works better on GitHub if the README.md is the file and the index.md is the
-link. Some care must be taken to ensure Hugo knows that things have changed
-when the README.md is modified.</p>
-
-<pre><code>ln -s ../README.md content/index.md 
-</code></pre>
-
-<p>The Hyde theme was cloned in and the relevant subdirectories copied to the
-blank site.</p>
-
-<pre><code>git clone --recursive https://github.com/spf13/hyde.git themes/hyde 
-rsync -auvi themes/hyde/{archetypes,layouts,static} .
-
-</code></pre>
-
-<p>Now we run Hugo as a server so we can see how things change as we
-edit the layouts and pages to how we want them.</p>
-
-<pre><code>hugo server --theme=hyde --buildDrafts
-</code></pre>
-
-<h3 id="toc_16">Regeneration</h3>
-
-<p>The following commands should be run to recompile the documentation and
-update the website after changes have been made.</p>
-
-<pre><code>
-# run hugo to build the website
-hugo
-
-# add and commit everything that changed
-git add -A
-git commit -m &quot;Update website `date`&quot; 
-git push
-
-# you may need to synchronize the remote and local gh-pages branches, in
-# which case this may be required (origin is the appropriate remote
-# repository):
-# git subtree pull --prefix=public origin gh-pages
-#
-# but this usually (sometimes) works by itself. Note that since this is a
-# top-level github.io site, the master is the btranch that must be pushed to,
-# the gh-pages branch is ignored here.
-git subtree push --prefix=public origin master
-
-</code></pre>
-
-<!-- vi:se nowrap tw=0: -->
+    <header>
+      <h2><a href='http://localhost:1313/website-install'> </a> </h2>
+    
+    </header>
 
 	
 
