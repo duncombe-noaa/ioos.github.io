@@ -6,5 +6,5 @@ layoutdir = "layouts"
 publishdir = "public"
 [params]
  Description = "Collection of IOOS documentation and software"
- Copyright = "(C) 2014 Integrated Ocean Observing System. Copyright reserved."
+ Copyright = "(c) 2014 Integrated Ocean Observing System. Rights reserved."
 
