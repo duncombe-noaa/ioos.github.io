@@ -1,4 +1,4 @@
-baseurl = "http://duncombe.github.io/ioos.github.io"
+baseurl = "http://ioos.github.io/"
 languageCode = "en-us"
 title = "IOOS GitHub Site" 
 contentdir = "content"
@@ -6,5 +6,5 @@ layoutdir = "layouts"
 publishdir = "public"
 [params]
  Description = "Collection of IOOS documentation and software"
- Copyright = "(C) 2014 Integrated Ocean Observing System. Rights reserved."
+ Copyright = "(c) 2014 Integrated Ocean Observing System. Rights reserved."
 

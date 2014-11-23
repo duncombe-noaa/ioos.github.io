@@ -6,6 +6,6 @@ git commit -m "Update website `date`"
 
 git push
 # git subtree pull --prefix=public
-git subtree push --prefix=public origin gh-pages
+git subtree push --prefix=public origin master
 
 
