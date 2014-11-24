@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>  &middot; IOOS GitHub Site </title>
+
+  
+  <link rel="stylesheet" href="http://ioos.github.io/css/poole.css">
+  <link rel="stylesheet" href="http://ioos.github.io/css/syntax.css">
+  <link rel="stylesheet" href="http://ioos.github.io/css/hyde.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.ico">
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="IOOS GitHub Site" />
+</head>
+
+
+<body>
+
+<div class="sidebar">
+   	<p>  <img src="http://ioos.github.io/images/ioos_blue2.png"
+   	alt="ioos_blue2.png"> </p> 
+
+	<div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>IOOS GitHub Site</h1>
+      <p class="lead">
+       Collection of IOOS documentation and software 
+      </p>
+    </div>
+
+
+    <ul class="sidebar-nav">
+	  <li><a href="http://ioos.github.io">home</a> </li>
+	  <li><a href="http://ioos.github.io/website-install/">about the site</a> </li>
+	  <li><a href="https://github.com/ioos/ioos.github.io" target="_blank">website repository</a> </li>
+	  <li><a href="http://github.com/ioos/" target="_blank">IOOS
+	  development pages</a> </li>
+      
+    </ul>
+
+	
+
+	
+  
+
+	<p>(c) 2014 Integrated Ocean Observing System. Rights reserved.</p>
+  </div>
+</div>
+
+
+    <div class="content container">
+<div class="post">
+
+  <h1></h1>
+
+    <div id="toc" class="well col-md-4 col-sm-6">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#toc_0">About</a>
+<ul>
+<li><a href="#toc_1">IOOS</a></li>
+<li><a href="#toc_2">Website generation, installation and updating</a>
+<ul>
+<li><a href="#toc_3">Summary</a></li>
+<li><a href="#toc_4">Creating the website</a></li>
+<li><a href="#toc_5">Regeneration</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+
+      
+
+<h1 id="toc_0">About</h1>
+
+<h2 id="toc_1">IOOS</h2>
+
+<p>Some explanation of IOOS might be nice?</p>
+
+<h2 id="toc_2">Website generation, installation and updating</h2>
+
+<p>The website will be transitioned to
+<a href="http://gohugo.io/overview/introduction">Hugo</a> for creation and regeneration,
+at least until we decide that Hugo is not the appropriate vehicle to do this.
+Hugo is written in <a href="https://golang.org/">go programming language</a>. It helps
+with modifying the chrome and template pages to understand the go syntax.  Hugo
+documentation is sparse at best. Close and careful reading is required. Also
+Hugo community appears to be small; not much shows up when searching on google
+for help. This may change, if the website builder gains popularity.</p>
+
+<p>The website will initially rely on Hugo for creation and deployment.  The top
+level document appears in both the GitHub <code>README.md</code> and the website&rsquo;s
+<code>index.html</code>.  The way this is accomplished is to symlink the <code>README.md</code> to
+<code>index.md</code> in the content subdirectory that Hugo expects. Thus Hugo creates
+<code>index.html</code> in public, while the same document still appears in the GitHub
+repository.  The generation scripts (<code>generation.sh</code> and <code>update.sh</code>) and
+Windows users need to be aware of the symlink so that they preserve it and the
+relationship between the files.</p>
+
+<h3 id="toc_3">Summary</h3>
+
+<p>Checkout the <code>new-website</code>  branch of the repository, change the layouts,
+templates, chrome, and markdown files as required. Regenerate the website with
+Hugo, the results will end up in <code>public/</code>. Commit and push the changes to the
+<code>new-website</code> branch on github, then <code>git subtree push</code> the <code>public/</code>
+subdirectory to the <code>master</code> branch in the repository on github.</p>
+
+<h3 id="toc_4">Creating the website</h3>
+
+<p>Initially this website was generated   by Jekyll. That was removed and a blank
+Hugo website was created with the original <code>README.md</code>.  The following commands
+were used to
+do this, and preserve the repository history and information in
+<code>ioos.github.io/.git</code></p>
+
+<pre><code>mv -i ioos.github.io/README.md
+rm -rf ioos.github.io/* 
+cd ioos.github.io/
+mkdir {archetypes,content,layouts,static}
+(  echo 'baseurl = &quot;http://ioos.github.io&quot;' 
+   echo 'languageCode = &quot;en-us&quot;'
+   ) &gt; config.toml
+</code></pre>
+
+<p>In order to use the <code>README.md</code> as an <code>index.html</code> page, a symlink was made.
+It works better on GitHub if the <code>README.md</code> is the file and <code>index.md</code> is the
+link. Some care must be taken to ensure Hugo knows that things have changed
+when any of these links are modified. To do this we touch an empty marker file,
+Hugo thinks the contents tree has changed (it has, but not in a way Hugo
+otherwise recognizes), and rebuilds the website.</p>
+
+<pre><code>ln -s ../README.md content/index.md 
+</code></pre>
+
+<p>The Hyde theme was cloned in and the relevant subdirectories copied to the
+blank site.</p>
+
+<pre><code>git clone --recursive https://github.com/spf13/hyde.git themes/hyde 
+rsync -auvi themes/hyde/{archetypes,layouts,static} .
+
+</code></pre>
+
+<p>Hugo can be run as a server to see how things change as
+the layouts and pages are edited.</p>
+
+<pre><code>hugo server --theme=hyde --buildDrafts
+</code></pre>
+
+<h3 id="toc_5">Regeneration</h3>
+
+<p>The following commands could be run to recompile the documentation and
+update the website after changes have been made.</p>
+
+<pre><code>
+# run hugo to build the website
+hugo
+
+# add and commit everything that changed
+git add -A
+git commit -m &quot;Update website `date`&quot; 
+git push
+
+# you may need to synchronize the remote and local gh-pages branches, in
+# which case this may be required (origin is the appropriate remote
+# repository):
+# git subtree pull --prefix=public origin gh-pages
+#
+# but this usually (sometimes) works by itself. Of course, it is very important
+# to note that since this is a top-level github.io site, the master is the
+# branch that must be pushed to, the gh-pages branch is ignored in this
+# context.
+
+git subtree push --prefix=public origin master
+
+</code></pre>
+
+<p>If you run into trouble remember that branch master is displayed as the website.
+As a failsafe everything in master can be deleted, and everything in subdirectory
+public in the new-website branch can be copied into the master branch. Et voila.</p>
+
+<!--
+    The following commands from history were the first to successfully push
+the subtree to the remote branch to publish the website. Might be useful to
+know what they were, so retain them here, until merge them in.
+
+
+ 2840  ./generate.sh 
+ 2841  ./update.sh 
+ 2844  git pull origin gh-pages:gh-pages
+ 2845  git subtree push --prefix=public origin gh-pages
+ 2846  git subtree split -P public -b gh-pages
+ 2848  git checkout gh-pages
+ 2853  git checkout new-website
+ 2854  git branch -d gh-pages
+ 2855  git push origin :gh-pages
+ 2858  rm -rf public/
+ 2861  git rm -r public
+ 2863  git commit -m "Clearing public for gh-pages"
+ 2864  git subtree add --prefix public origin gh-pages --squash
+ 2866  git checkout -b gh-pages 
+ 2869  git checkout new-website
+ 2871  hugo
+ 2872  ./generate.sh 
+ 2873  ./update.sh 
+ 2874  git subtree split -P public -b gh-pages
+
+-->
+
+<!-- vi:se nowrap tw=0: -->
+
+</div>
+</div>
+
+  </body>
+</html>
