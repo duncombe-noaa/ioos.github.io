@@ -1,100 +1,19 @@
- 2776  git branch -a
- 2777  git branch -d new-wesite
- 2778  git lg
- 2779  git status
- 2780  ls -ltr
- 2781  ls -ltr content/
- 2782  vi config.toml 
- 2783  vi layouts/_default/list.html 
- 2784  ls -ltr
- 2785  ls themes/
- 2786  ls -ltr
- 2787  ls public/
- 2788  less public/index.html 
- 2789  ls layouts/
- 2790  ls layouts/partials/
- 2791  ls themes/hyde/
- 2792  git clone --recursive https://github.com/spf13/hyde.git themes/hyde
- 2793  ls -ltr
- 2794  ls themes/hyde/
- 2795  ls themes/hyde/layouts/
- 2796  ls themes/hyde/static/
- 2797  ls themes/hyde/archetypes/
- 2798  ls -altr ../glossary/layouts/
- 2799  less layouts/index.html 
- 2800  rsync -nauvi ../glossary/layouts .
- 2801  rsync -auvi ../glossary/layouts .
- 2802  ls -ltr
- 2803  ls -ltr layouts/
- 2804  rsync -nauvvi ../glossary/layouts .
- 2805  cp -aiv ../glossary/layouts .
- 2806  ls -ltr
- 2807  rsync -nauvvi ../glossary/static .
- 2808  rsync -nauvvci ../glossary/static .
- 2809  cp -aiv ../glossary/static .
- 2810  ls -ltr
- 2811  ls -altr archetypes/
- 2812  cp -aiv ../glossary/generate.sh .
- 2813  cp -aiv ../glossary/update.sh .
- 2814  vi generate.sh update.sh 
- 2815  git remote -a
- 2816  git remote -v
- 2817  ./generate.sh 
- 2818  vi .gitignore
- 2819  git add .gitignore 
- 2820  git commit -m "Adding .gitignore"
- 2821  ls -ltr
- 2822  ls -altr
- 2823  vi layouts/index.html 
- 2824  vi layouts/chrome/sidebar.html 
- 2825  vi layouts/chrome/head.html 
- 2826  ls -altr
- 2827  rm -rf public/
- 2828  mkdir public
- 2829  touch content/.gitkeep 
- 2830  ls public/
- 2831  ls -ltr public/
- 2832  vi layouts/chrome/sidebar.html 
- 2833  vi README.md 
- 2834  ln -s ../website-install.md content/website-install.md
- 2835  ls -ltr
- 2836  ls -latr content/
- 2837  ls -ltr
- 2838  vi config.toml 
- 2839  git remote -v
  2840  ./generate.sh 
  2841  ./update.sh 
- 2842  ls -ltr
- 2843  git pull --help
  2844  git pull origin gh-pages:gh-pages
  2845  git subtree push --prefix=public origin gh-pages
  2846  git subtree split -P public -b gh-pages
- 2847  ls -altr
  2848  git checkout gh-pages
- 2849  ls -altr
- 2850  rm -rf themes
- 2851  git status
- 2852  git branch -a
  2853  git checkout new-website
  2854  git branch -d gh-pages
  2855  git push origin :gh-pages
- 2856  git subtree add --prefix public origin gh-pages --squash
- 2857  ls -altr public/
  2858  rm -rf public/
- 2859  git subtree add --prefix public origin gh-pages --squash
- 2860  git status
  2861  git rm -r public
- 2862  git status
  2863  git commit -m "Clearing public for gh-pages"
  2864  git subtree add --prefix public origin gh-pages --squash
- 2865  git status
  2866  git checkout -b gh-pages 
- 2867  ls -altr
- 2868  git status
  2869  git checkout new-website
- 2870  ls -altr
  2871  hugo
  2872  ./generate.sh 
  2873  ./update.sh 
  2874  git subtree split -P public -b gh-pages
- 2875  history | tail -n 100 > howIdidit.txt
