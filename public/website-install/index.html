@@ -101,9 +101,9 @@ for help. This may change, if the website builder gains popularity.</p>
 
 <p>The website will initially rely on Hugo for creation and deployment.  The top
 level document appears in both the GitHub <code>README.md</code> and the website&rsquo;s
-<code>index.html</code>.  The way this is accomplished is to symlink the <code>README.md</code> to
-<code>index.md</code> in the content subdirectory that Hugo expects. Thus Hugo creates
-<code>index.html</code> in public, while the same document still appears in the GitHub
+<code>index.html</code>.  This is accomplished is by symlinking <code>README.md</code> to
+<code>index.md</code> in the <code>content/</code> subdirectory that Hugo expects. Thus Hugo creates
+<code>index.html</code> in <code>public/</code>, while the same document still appears in the GitHub
 repository.  The generation scripts (<code>generation.sh</code> and <code>update.sh</code>) and
 Windows users need to be aware of the symlink so that they preserve it and the
 relationship between the files.</p>
@@ -185,9 +185,10 @@ git subtree push --prefix=public origin master
 
 </code></pre>
 
-<p>If you run into trouble remember that branch master is displayed as the website.
-As a failsafe everything in master can be deleted, and everything in subdirectory
-public in the new-website branch can be copied into the master branch. Et voila.</p>
+<p>If you run into trouble remember that branch <code>master</code> is displayed as the
+website.  As a failsafe everything in <code>master</code> can be deleted, and everything
+in subdirectory <code>public/</code> in the <code>new-website</code> branch can be copied into the
+<code>master</code> branch. Et voila.</p>
 
 <!--
     The following commands from history were the first to successfully push
