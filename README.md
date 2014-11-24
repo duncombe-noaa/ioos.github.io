@@ -4,8 +4,11 @@ ioos.github.io
 IOOS GitHub pages are the entry point for technical documentation.
 
 # Initial navigation structure
+
+Not sure how to do this, but this is a start, can be easily changed!
+
 * Projects and Software Development Activities
-  * System Integration Test
+  * <a href="#System Integration Test">System Integration Test</a>
   * ncSOS
   * i52N and related activities like sensor web harvesters
   * pyoos
@@ -23,7 +26,13 @@ IOOS GitHub pages are the entry point for technical documentation.
 
 
 # Projects
+<a name="System Integration Test"></a>
 ## System Integration Test
+
+The [system integration test development site on
+github](https://github.com/ioos/system-test) contains IPython
+notebooks demonstrating how to access data from servers in various
+scenarios. 
 
 ## ncSOS
 
@@ -35,6 +44,8 @@ What are the responsiblities of an IOOS Data Provider? This page should be
 based on [http://www.ioos.noaa.gov/data/contribute_data.html].
 
 ## SOS Guidelines
+A website with [Documentation on using SOS links from here](http://ioos.github.io/sos-guidelines). 
+
 Includes the following:    
 
 * Overview of SOS activities in IOOS based on Alex's one page summary   
@@ -43,7 +54,7 @@ Includes the following:
 * Testing/Compliance   
 
 ## netCDF and/or opendap guidelines
-* See github.com/dpsnowden/netcdf-guidelines for some initial ideas on what
+* See [https://github.com/dpsnowden/netcdf-guidelines] for some initial ideas on what
 this needs to contain.
 * 
 
@@ -52,4 +63,9 @@ this needs to contain.
 ## Asset Identifiers 
 
 ## Vocabularies
+
+# Contributing and changes
+
+To make changes to this website and add information, see the
+[about](website-install.html) page. 
 
