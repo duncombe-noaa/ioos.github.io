@@ -67,5 +67,5 @@ this needs to contain.
 # Contributing and changes
 
 To make changes to this website and add information, see the
-[about](website-install.html) page. 
+[about](website-install) page. 
 
