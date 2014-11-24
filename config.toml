@@ -1,4 +1,4 @@
-baseurl = "http://duncombe.github.io/ioos.github.io"
+baseurl = "http://ioos.github.io"
 languageCode = "en-us"
 title = "IOOS GitHub Site" 
 contentdir = "content"
