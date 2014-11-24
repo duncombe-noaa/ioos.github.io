@@ -54,10 +54,11 @@ mkdir {archetypes,content,layouts,static}
 ```
 
 In order to use the `README.md` as an `index.html` page, a symlink was made.
-It works better on GitHub if the README.md is the file and the index.md is the
+It works better on GitHub if the `README.md` is the file and `index.md` is the
 link. Some care must be taken to ensure Hugo knows that things have changed
-when the README.md is modified. To do this we touch an empty marker file, Hugo 
-thinks the contents tree has changed, and rebuilds the website.
+when any of these links are modified. To do this we touch an empty marker file,
+Hugo thinks the contents tree has changed (it has, but not in a way Hugo
+otherwise recognizes), and rebuilds the website.
 
 ```
 ln -s ../README.md content/index.md 
