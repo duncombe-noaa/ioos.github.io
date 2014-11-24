@@ -166,10 +166,11 @@ mkdir {archetypes,content,layouts,static}
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;In order to use the &lt;code&gt;README.md&lt;/code&gt; as an &lt;code&gt;index.html&lt;/code&gt; page, a symlink was made.
-It works better on GitHub if the README.md is the file and the index.md is the
+It works better on GitHub if the &lt;code&gt;README.md&lt;/code&gt; is the file and &lt;code&gt;index.md&lt;/code&gt; is the
 link. Some care must be taken to ensure Hugo knows that things have changed
-when the README.md is modified. To do this we touch an empty marker file, Hugo
-thinks the contents tree has changed, and rebuilds the website.&lt;/p&gt;
+when any of these links are modified. To do this we touch an empty marker file,
+Hugo thinks the contents tree has changed (it has, but not in a way Hugo
+otherwise recognizes), and rebuilds the website.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;ln -s ../README.md content/index.md 
 &lt;/code&gt;&lt;/pre&gt;

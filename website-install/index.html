@@ -134,10 +134,11 @@ mkdir {archetypes,content,layouts,static}
 </code></pre>
 
 <p>In order to use the <code>README.md</code> as an <code>index.html</code> page, a symlink was made.
-It works better on GitHub if the README.md is the file and the index.md is the
+It works better on GitHub if the <code>README.md</code> is the file and <code>index.md</code> is the
 link. Some care must be taken to ensure Hugo knows that things have changed
-when the README.md is modified. To do this we touch an empty marker file, Hugo
-thinks the contents tree has changed, and rebuilds the website.</p>
+when any of these links are modified. To do this we touch an empty marker file,
+Hugo thinks the contents tree has changed (it has, but not in a way Hugo
+otherwise recognizes), and rebuilds the website.</p>
 
 <pre><code>ln -s ../README.md content/index.md 
 </code></pre>
