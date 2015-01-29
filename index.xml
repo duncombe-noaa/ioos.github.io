@@ -1,82 +1,44 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-      <title>Recent Content on IOOS GitHub Site </title>
-      <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>http://ioos.github.io/index.xml</link>
+    <title> </title>
+    <link>http://ioos.github.io/index.xml/</link>
     <language>en-us</language>
+    <author></author>
+    <rights>(C) 2014</rights>
+    <updated>2014-08-04 07:56:39 &#43;0000 UTC</updated>
+
     
-    
-    <updated>Tue, 01 Jan 2008 00:00:00 UTC</updated>
-    
-    <item>
-      <title></title>
-      <link>http://ioos.github.io/</link>
-      <pubDate>Tue, 01 Jan 2008 00:00:00 UTC</pubDate>
       
-      <guid>http://ioos.github.io/</guid>
-      <description>
+        <item>
+          <title>ABOUT: IOOS GitHub Pages</title>
+          <link>http://ioos.github.io/index.html</link>
+          <pubDate>Mon, 04 Aug 2014 07:56:39 UTC</pubDate>
+          <author></author>
+          <guid>http://ioos.github.io/index.html</guid>
+          <description>
 
-&lt;h1 id=&#34;toc_0&#34;&gt;ioos.github.io&lt;/h1&gt;
-
-&lt;p&gt;IOOS GitHub pages are the entry point for technical documentation.&lt;/p&gt;
-
-&lt;h1 id=&#34;toc_1&#34;&gt;Initial navigation structure&lt;/h1&gt;
-
-&lt;p&gt;Not sure how to do this, but this is a start, can be easily changed!&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Projects and Software Development Activities
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#System Integration Test&#34;&gt;System Integration Test&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;ncSOS&lt;/li&gt;
-&lt;li&gt;i52N and related activities like sensor web harvesters&lt;/li&gt;
-&lt;li&gt;pyoos&lt;/li&gt;
-&lt;li&gt;compliance-checker&lt;/li&gt;
-&lt;li&gt;registry&lt;/li&gt;
-&lt;li&gt;catalog&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Guidelines and specifications
-
-&lt;ul&gt;
-&lt;li&gt;Data Provider Guidelines&lt;/li&gt;
-&lt;li&gt;SOS Guidelines&lt;/li&gt;
-&lt;li&gt;netCDF Guidelines&lt;/li&gt;
-&lt;li&gt;ioos-csv-tsv&lt;/li&gt;
-&lt;li&gt;asset identifiers&lt;/li&gt;
-&lt;li&gt;vocabularies&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;About  (Not sure about this yet)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&#34;toc_2&#34;&gt;Projects&lt;/h1&gt;
+&lt;h1 id=&#34;toc_0&#34;&gt;Projects&lt;/h1&gt;
 
 &lt;p&gt;&lt;a name=&#34;System Integration Test&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;toc_3&#34;&gt;System Integration Test&lt;/h2&gt;
+&lt;h2 id=&#34;toc_1&#34;&gt;System Integration Test&lt;/h2&gt;
 
-&lt;p&gt;The &lt;a href=&#34;https://github.com/ioos/system-test&#34;&gt;system integration test development site on
-github&lt;/a&gt; contains IPython
-notebooks demonstrating how to access data from servers in various
-scenarios.&lt;/p&gt;
+&lt;p&gt;The &lt;a href=&#34;https://github.com/ioos/system-test&#34;&gt;system integration test development site on github&lt;/a&gt; contains IPython notebooks demonstrating how to access data from servers in various scenarios.&lt;/p&gt;
 
-&lt;h2 id=&#34;toc_4&#34;&gt;ncSOS&lt;/h2&gt;
+&lt;h2 id=&#34;toc_2&#34;&gt;ncSOS&lt;/h2&gt;
 
-&lt;h2 id=&#34;toc_5&#34;&gt;i52N and related activities like sensor web harvesters&lt;/h2&gt;
+&lt;h2 id=&#34;toc_3&#34;&gt;i52N and related activities like sensor web harvesters&lt;/h2&gt;
 
-&lt;h1 id=&#34;toc_6&#34;&gt;Guidelines and specifications&lt;/h1&gt;
+&lt;h1 id=&#34;toc_4&#34;&gt;Guidelines and specifications&lt;/h1&gt;
 
-&lt;h2 id=&#34;toc_7&#34;&gt;Data Provider Guidelines&lt;/h2&gt;
+&lt;h2 id=&#34;toc_5&#34;&gt;Data Provider Guidelines&lt;/h2&gt;
 
-&lt;p&gt;What are the responsiblities of an IOOS Data Provider? This page should be
-based on [&lt;a href=&#34;http://www.ioos.noaa.gov/data/contribute_data.html&#34;&gt;http://www.ioos.noaa.gov/data/contribute_data.html&lt;/a&gt;].&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.ioos.noaa.gov/data/contribute_data.html&#34;&gt;&lt;em&gt;&lt;strong&gt;Guidance for Implementation of the Integrated Ocean Observing System (IOOS) Data Management and Communications (DMAC) Subsystem&lt;/strong&gt;&lt;/em&gt;&lt;/a&gt; - the responsibilities of an IOOS Data Provider published on the official IOOS Web site.&lt;/p&gt;
 
-&lt;h2 id=&#34;toc_8&#34;&gt;SOS Guidelines&lt;/h2&gt;
+&lt;h2 id=&#34;toc_6&#34;&gt;SOS Guidelines&lt;/h2&gt;
 
-&lt;p&gt;A website with &lt;a href=&#34;http://ioos.github.io/sos-guidelines&#34;&gt;Documentation on using SOS links from here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Includes the following:&lt;/p&gt;
+&lt;p&gt;A website with &lt;a href=&#34;http://ioos.github.io/sos-guidelines&#34;&gt;Documentation on using SOS&lt;/a&gt; that includes:&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Overview of SOS activities in IOOS based on Alex&amp;rsquo;s one page summary&lt;br /&gt;&lt;/li&gt;
@@ -85,174 +47,358 @@ based on [&lt;a href=&#34;http://www.ioos.noaa.gov/data/contribute_data.html&#34
 &lt;li&gt;Testing/Compliance&lt;br /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;toc_9&#34;&gt;netCDF and/or opendap guidelines&lt;/h2&gt;
+&lt;h2 id=&#34;toc_7&#34;&gt;netCDF and/or opendap guidelines&lt;/h2&gt;
 
 &lt;ul&gt;
-&lt;li&gt;See [&lt;a href=&#34;https://github.com/dpsnowden/netcdf-guidelines&#34;&gt;https://github.com/dpsnowden/netcdf-guidelines&lt;/a&gt;] for some initial ideas on what
-this needs to contain.&lt;/li&gt;
+&lt;li&gt;See [&lt;a href=&#34;https://github.com/dpsnowden/netcdf-guidelines&#34;&gt;https://github.com/dpsnowden/netcdf-guidelines&lt;/a&gt;] for some initial ideas on what this needs to contain.&lt;/li&gt;
 &lt;li&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;toc_10&#34;&gt;ioos-csv-tsv&lt;/h2&gt;
+&lt;h2 id=&#34;toc_8&#34;&gt;ioos-csv-tsv&lt;/h2&gt;
 
-&lt;h2 id=&#34;toc_11&#34;&gt;Asset Identifiers&lt;/h2&gt;
+&lt;h2 id=&#34;toc_9&#34;&gt;Asset Identifiers&lt;/h2&gt;
 
-&lt;h2 id=&#34;toc_12&#34;&gt;Vocabularies&lt;/h2&gt;
+&lt;h2 id=&#34;toc_10&#34;&gt;Vocabularies&lt;/h2&gt;
 
-&lt;h1 id=&#34;toc_13&#34;&gt;Contributing and changes&lt;/h1&gt;
+&lt;h1 id=&#34;toc_11&#34;&gt;Contributing and changes&lt;/h1&gt;
 
-&lt;p&gt;To make changes to this website and add information, see the
-&lt;a href=&#34;website-install&#34;&gt;about&lt;/a&gt; page.&lt;/p&gt;
+&lt;p&gt;To make changes to this website and add information, see the &lt;a href=&#34;website_deployment_workflow_updated&#34;&gt;Website Deployment Workflow&lt;/a&gt; page.&lt;/p&gt;
 </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://ioos.github.io/website-install</link>
-      <pubDate>Tue, 01 Jan 2008 00:00:00 UTC</pubDate>
+        </item>
       
-      <guid>http://ioos.github.io/website-install</guid>
-      <description>
-
-&lt;h1 id=&#34;toc_0&#34;&gt;About&lt;/h1&gt;
-
-&lt;h2 id=&#34;toc_1&#34;&gt;IOOS&lt;/h2&gt;
-
-&lt;p&gt;Some explanation of IOOS might be nice?&lt;/p&gt;
-
-&lt;h2 id=&#34;toc_2&#34;&gt;Website generation, installation and updating&lt;/h2&gt;
-
-&lt;p&gt;The website will be transitioned to
-&lt;a href=&#34;http://gohugo.io/overview/introduction&#34;&gt;Hugo&lt;/a&gt; for creation and regeneration,
-at least until we decide that Hugo is not the appropriate vehicle to do this.
-Hugo is written in &lt;a href=&#34;https://golang.org/&#34;&gt;go programming language&lt;/a&gt;. It helps
-with modifying the chrome and template pages to understand the go syntax.  Hugo
-documentation is sparse at best. Close and careful reading is required. Also
-Hugo community appears to be small; not much shows up when searching on google
-for help. This may change, if the website builder gains popularity.&lt;/p&gt;
-
-&lt;p&gt;The website will initially rely on Hugo for creation and deployment.  The top
-level document appears in both the GitHub &lt;code&gt;README.md&lt;/code&gt; and the website&amp;rsquo;s
-&lt;code&gt;index.html&lt;/code&gt;.  This is accomplished is by symlinking &lt;code&gt;README.md&lt;/code&gt; to
-&lt;code&gt;index.md&lt;/code&gt; in the &lt;code&gt;content/&lt;/code&gt; subdirectory that Hugo expects. Thus Hugo creates
-&lt;code&gt;index.html&lt;/code&gt; in &lt;code&gt;public/&lt;/code&gt;, while the same document still appears in the GitHub
-repository.  The generation scripts (&lt;code&gt;generation.sh&lt;/code&gt; and &lt;code&gt;update.sh&lt;/code&gt;) and
-Windows users need to be aware of the symlink so that they preserve it and the
-relationship between the files.&lt;/p&gt;
-
-&lt;h3 id=&#34;toc_3&#34;&gt;Summary&lt;/h3&gt;
-
-&lt;p&gt;Checkout the &lt;code&gt;new-website&lt;/code&gt;  branch of the repository, change the layouts,
-templates, chrome, and markdown files as required. Regenerate the website with
-Hugo, the results will end up in &lt;code&gt;public/&lt;/code&gt;. Commit and push the changes to the
-&lt;code&gt;new-website&lt;/code&gt; branch on github, then &lt;code&gt;git subtree push&lt;/code&gt; the &lt;code&gt;public/&lt;/code&gt;
-subdirectory to the &lt;code&gt;master&lt;/code&gt; branch in the repository on github.&lt;/p&gt;
-
-&lt;h3 id=&#34;toc_4&#34;&gt;Creating the website&lt;/h3&gt;
-
-&lt;p&gt;Initially this website was generated   by Jekyll. That was removed and a blank
-Hugo website was created with the original &lt;code&gt;README.md&lt;/code&gt;.  The following commands
-were used to
-do this, and preserve the repository history and information in
-&lt;code&gt;ioos.github.io/.git&lt;/code&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;mv -i ioos.github.io/README.md
-rm -rf ioos.github.io/* 
-cd ioos.github.io/
-mkdir {archetypes,content,layouts,static}
-(  echo &#39;baseurl = &amp;quot;http://ioos.github.io&amp;quot;&#39; 
-   echo &#39;languageCode = &amp;quot;en-us&amp;quot;&#39;
-   ) &amp;gt; config.toml
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;In order to use the &lt;code&gt;README.md&lt;/code&gt; as an &lt;code&gt;index.html&lt;/code&gt; page, a symlink was made.
-It works better on GitHub if the &lt;code&gt;README.md&lt;/code&gt; is the file and &lt;code&gt;index.md&lt;/code&gt; is the
-link. Some care must be taken to ensure Hugo knows that things have changed
-when any of these links are modified. To do this we touch an empty marker file,
-Hugo thinks the contents tree has changed (it has, but not in a way Hugo
-otherwise recognizes), and rebuilds the website.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;ln -s ../README.md content/index.md 
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The Hyde theme was cloned in and the relevant subdirectories copied to the
-blank site.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;git clone --recursive https://github.com/spf13/hyde.git themes/hyde 
-rsync -auvi themes/hyde/{archetypes,layouts,static} .
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Hugo can be run as a server to see how things change as
-the layouts and pages are edited.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;hugo server --theme=hyde --buildDrafts
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;toc_5&#34;&gt;Regeneration&lt;/h3&gt;
-
-&lt;p&gt;The following commands could be run to recompile the documentation and
-update the website after changes have been made.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;
-# run hugo to build the website
-hugo
-
-# add and commit everything that changed
-git add -A
-git commit -m &amp;quot;Update website `date`&amp;quot; 
-git push
-
-# you may need to synchronize the remote and local gh-pages branches, in
-# which case this may be required (origin is the appropriate remote
-# repository):
-# git subtree pull --prefix=public origin gh-pages
-#
-# but this usually (sometimes) works by itself. Of course, it is very important
-# to note that since this is a top-level github.io site, the master is the
-# branch that must be pushed to, the gh-pages branch is ignored in this
-# context.
-
-git subtree push --prefix=public origin master
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;If you run into trouble remember that branch &lt;code&gt;master&lt;/code&gt; is displayed as the
-website.  As a failsafe everything in &lt;code&gt;master&lt;/code&gt; can be deleted, and everything
-in subdirectory &lt;code&gt;public/&lt;/code&gt; in the &lt;code&gt;new-website&lt;/code&gt; branch can be copied into the
-&lt;code&gt;master&lt;/code&gt; branch. Et voila.&lt;/p&gt;
-
-&lt;!--
-    The following commands from history were the first to successfully push
-the subtree to the remote branch to publish the website. Might be useful to
-know what they were, so retain them here, until merge them in.
-
-
- 2840  ./generate.sh 
- 2841  ./update.sh 
- 2844  git pull origin gh-pages:gh-pages
- 2845  git subtree push --prefix=public origin gh-pages
- 2846  git subtree split -P public -b gh-pages
- 2848  git checkout gh-pages
- 2853  git checkout new-website
- 2854  git branch -d gh-pages
- 2855  git push origin :gh-pages
- 2858  rm -rf public/
- 2861  git rm -r public
- 2863  git commit -m &#34;Clearing public for gh-pages&#34;
- 2864  git subtree add --prefix public origin gh-pages --squash
- 2866  git checkout -b gh-pages 
- 2869  git checkout new-website
- 2871  hugo
- 2872  ./generate.sh 
- 2873  ./update.sh 
- 2874  git subtree split -P public -b gh-pages
-
---&gt;
-
-&lt;!-- vi:se nowrap tw=0: --&gt;
-</description>
-    </item>
     
+      
+    
+      
+        <item>
+          <title>Deployment of IOOS Websites on GitHub</title>
+          <link>http://ioos.github.io/website_deployment_workflow_updated/</link>
+          <pubDate>Tue, 04 Mar 2014 07:56:39 UTC</pubDate>
+          <author></author>
+          <guid>http://ioos.github.io/website_deployment_workflow_updated/</guid>
+          <description>
+
+&lt;h1 id=&#34;toc_0&#34;&gt;Introduction&lt;/h1&gt;
+
+&lt;p&gt;This document describes the deployment of the IOOS documentation web pages generated with a &lt;a href=&#34;http://gohugo.io/&#34;&gt;&lt;em&gt;&lt;strong&gt;Hugo&lt;/strong&gt;&lt;/em&gt;&lt;/a&gt; static page generator. The &lt;em&gt;&lt;strong&gt;Hugo&lt;/strong&gt;&lt;/em&gt; generator was picked out after some research and experiments mostly for the following reasons:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;portability, i.e. it is a self-contained application that does not require installation;&lt;/li&gt;
+&lt;li&gt;no prerequisite installation of a tool/language like Ruby, Python, or Java;&lt;/li&gt;
+&lt;li&gt;direct processing of the Markdown content;&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;very satisfactory results with a bare minimal modification of the default themes and templates;&lt;/li&gt;
+&lt;li&gt;relatively simple workflow of the generated web site deployment onto GitHub Pages.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The following workflow description is mostly based on the &lt;a href=&#34;http://gohugo.io/tutorials/github_pages_blog/&#34;&gt;Hosting on GitHub Pages&lt;/a&gt; tutorial, which has been updated to reflect IOOS specifics.&lt;/p&gt;
+
+&lt;h1 id=&#34;toc_1&#34;&gt;IOOS Documentation Repositories&lt;/h1&gt;
+
+&lt;p&gt;The IOOS DMAC Documentation Strategy requires that all DMAC-related documentation is converted into Markdown, and stored in a specially structured GitHub repository. In general, the repository must contain a &amp;ldquo;doc&amp;rdquo; directory that holds all documents in Markdown, and a &amp;ldquo;README.md&amp;rdquo; file that briefly describes the repository:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;   ioos/[some repository]/
+    ├── doc/
+    |    ├── DOC1.md
+    |    ├── DOC2.md
+    |    |    └── images/
+    |    └── DOC3.md  
+    └── README.md
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In some cases the repository may have more complex structure, and contain not only Markdown files; for example, the &lt;a href=&#34;https://github.com/ioos/sos-guidelines&#34;&gt;sos-guidelines&lt;/a&gt; repository includes an additional SOS Templates section with a set of XML files:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;   ioos/sos-guidelines/
+    ├── doc/
+    |    ├── testing/
+    |    |    └── sos_test_list_github_notoc_summary.md
+    |    └── wsdd/ 
+    |         ├── sos_wsdd_github_notoc.md    
+    |         └── sos_wsdd_github_toc.md
+    ├── template/
+    |    └── milestone 1.0/
+    |          ├── OM-GetObservation.xml
+    |          ├── SML-DescribeSensor-Network.xml
+    |          ├── SML-DescribeSensor-Station.xml
+    |          ├── SOS-GetCapabilities.xml
+    |          ├── SWE-MultiStation-TimeSeries.xml
+    |          ├── SWE-MultiStation-TimeSeries_QC.xml
+    |          ├── SWE-SingleStation-SingleProperty-TimeSeries.xml
+    |          ├── SWE-SingleStation-TimeSeriesProfile.xml
+    |          └── SWE-SingleStation-TimeSeriesProfile_QC.xml
+    └── README.md
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;toc_2&#34;&gt;Structure of IOOS Documentation Website&lt;/h1&gt;
+
+&lt;p&gt;By default, &lt;em&gt;&lt;strong&gt;Hugo&lt;/strong&gt;&lt;/em&gt; expects the content of the site to be structured in some specific way, and uses that same structure to render the website.&lt;/p&gt;
+
+&lt;p&gt;The top level of a source directory will typically have the following elements:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;   ioos/[some-repository-name]/
+    ├── archtypes/
+    ├── content/
+    ├── layouts/
+    ├── static/
+    └── config file
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The &lt;code&gt;content&lt;/code&gt; directory by default holds the documents that are the actual content of the website (i.e. are rendered by &lt;em&gt;&lt;strong&gt;Hugo&lt;/strong&gt;&lt;/em&gt;), and sub-directories of the &lt;code&gt;content&lt;/code&gt; directory form the sections. The real content holding directory may be changed with a &lt;em&gt;contentdir&lt;/em&gt; value in the &lt;em&gt;&lt;strong&gt;Hugo&lt;/strong&gt;&lt;/em&gt; &lt;a href=&#34;http://gohugo.io/overview/configuration/&#34;&gt;config file&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The &lt;code&gt;static&lt;/code&gt; directory is used to hold the common website elements, such as Style Sheets, Java Scripts, and images, etc., which will be copied directly into the final site when rendered. Although &lt;em&gt;&lt;strong&gt;Hugo&lt;/strong&gt;&lt;/em&gt; does not require any specific structure for &lt;code&gt;static&lt;/code&gt; directory, it is usually organized in the following way:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;   static/
+    ├── css/
+    ├── js/
+    └── images/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;NOTES&lt;/strong&gt;&lt;/em&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;Currently, &lt;em&gt;&lt;strong&gt;Hugo&lt;/strong&gt;&lt;/em&gt; can render only Markdown files, so all documents in the &lt;code&gt;contentdir&lt;/code&gt; (e.g. &amp;lsquo;content&amp;rsquo;) must be in Markdown format for proper rendering. As the original documents may be in various formats, it is necessary to keep the &lt;code&gt;contentdir&lt;/code&gt; separate from the original document directory (e.g. &amp;lsquo;doc&amp;rsquo;).&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;All images and diagrams from the original documents that should appear on the rendered web pages must be copied into the &lt;em&gt;&lt;strong&gt;static/images&lt;/strong&gt;&lt;/em&gt; directory for the proper website rendering.  The links to the images in the Markdown version of the document have to be modified accordingly.&lt;br /&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;toc_3&#34;&gt;Site Config File&lt;/h2&gt;
+
+&lt;p&gt;The config file defines the framework of the website generated by &lt;em&gt;&lt;strong&gt;Hugo&lt;/strong&gt;&lt;/em&gt;. It defines site-wide settings (like the websites &lt;code&gt;baseurl&lt;/code&gt;), and allows to modify to some extent the default website structure. For example, the &lt;code&gt;sos-guidelines&lt;/code&gt; website has file &lt;code&gt;config.toml&lt;/code&gt; with the following contents&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;baseurl = &amp;quot;http://abirger.github.io/sos-guidelines&amp;quot;
+CanonifyUrls = true
+contentdir = &amp;quot;content&amp;quot;
+layoutdir = &amp;quot;layouts&amp;quot;
+publishdir = &amp;quot;public&amp;quot;
+languageCode = &amp;quot;en-us&amp;quot;
+[params]
+    Title = &amp;quot;IOOS SOS Guidelines&amp;quot;
+    Tagline = &amp;quot;Docs, codes, scripts, templates&amp;quot;
+[params.Github]
+    Head = &amp;quot;master&amp;quot;
+    Url = &amp;quot;https://github.com/ioos/sos-guidelines&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;For detailed explanation of how to build the &lt;em&gt;&lt;strong&gt;Hugo&lt;/strong&gt;&lt;/em&gt; config file, and the exact meaning of the parameters and operators refer to the &lt;a href=&#34;http://gohugo.io/overview/configuration&#34;&gt;Configuration&lt;/a&gt; section of &lt;em&gt;&lt;strong&gt;Hugo&lt;/strong&gt;&lt;/em&gt; documentation.&lt;/p&gt;
+
+&lt;h2 id=&#34;toc_4&#34;&gt;HTML Templates&lt;/h2&gt;
+
+&lt;p&gt;For IOOS DMAC documentation web pages, the &lt;a href=&#34;https://github.com/tummychow/lanyon-hugo&#34;&gt;&lt;em&gt;&lt;strong&gt;Lanyon&lt;/strong&gt;&lt;/em&gt;&lt;/a&gt; theme has been chosen because it has a sliding sidebar controlled by an unobtrusive clickable button, which allows using almost all available screen space for large documents like XML listings and such. The default theme was slightly modified in order to increase its expressiveness, add IOOS logo, and further expand the document viewing area.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;NOTES:&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;The &lt;em&gt;&lt;strong&gt;Hugo&lt;/strong&gt;&lt;/em&gt; requires that the home page should be defined as the &lt;code&gt;index.html&lt;/code&gt; file in the &lt;code&gt;layouts&lt;/code&gt; directory.&lt;/li&gt;
+&lt;li&gt;To show the documents&amp;rsquo; summary on the website home page, each document in &lt;code&gt;contentdir&lt;/code&gt; directory has to start from the summary text separated from the rest of the document with the line that contains the &amp;lt;!&amp;ndash;more&amp;ndash;&amp;gt; comment.&lt;/li&gt;
+&lt;li&gt;If the home page should contain just a single document (e.g. about the site), that document must have a &lt;code&gt;url = &amp;quot;index.html&amp;quot;&lt;/code&gt; line in the &lt;a href=&#34;#toc_5&#34;&gt;front matter&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;The IOOS logo is in the &amp;lsquo;ioos_blue2.png&amp;rsquo; file located in &amp;lsquo;static/images/&amp;rsquo; directory.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;For a detailed description of the &lt;em&gt;&lt;strong&gt;Hugo&lt;/strong&gt;&lt;/em&gt; themes, templates and layouts refer to the &lt;a href=&#34;http://gohugo.io/&#34;&gt;&lt;em&gt;&lt;strong&gt;Hugo&lt;/strong&gt;&lt;/em&gt; documentation&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;toc_5&#34;&gt;Hugo Metadata in Content Files&lt;/h2&gt;
+
+&lt;p&gt;To ensure a proper rendering of the website content, each document in the &lt;code&gt;contentdir&lt;/code&gt; should include at the top a metadata section. That metadata section is called a &lt;a href=&#34;http://gohugo.io/content/front-matter/&#34;&gt;front matter&lt;/a&gt;, and should be written in YAML, TOML or JSON format. The front matter tells &lt;em&gt;&lt;strong&gt;Hugo&lt;/strong&gt;&lt;/em&gt; some details of how to render the content file. For example, the following front matter is included in the SOS WSDD file:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;+++
+draft = false
+title = &amp;quot;IOOS SOS v1.0 WSDD&amp;quot;
+description = &amp;quot;IOOS SOS v1.0 Web Service Description&amp;quot;
+type = &amp;quot;post&amp;quot;
+sidebar = true
+date = 2014-08-04T08:09:56Z
+weight = &amp;quot;1&amp;quot;
++++
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In the following example of the front matter, the line &lt;code&gt;url = &amp;quot;index.html&amp;quot;&lt;/code&gt; instructs &lt;em&gt;&lt;strong&gt;Hugo&lt;/strong&gt;&lt;/em&gt; that this file should be rendered as a home page:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;+++
+weight = &amp;quot;0&amp;quot;
+type = &amp;quot;post&amp;quot;
+draft = false
+sidebar = true
+Title = &amp;quot;ABOUT: Biological Data Enrollment Process&amp;quot;
+date = 2014-08-04T07:56:39Z
+url = &amp;quot;index.html&amp;quot;
++++
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;For a detailed description of the metadata section supported formats and variables refer to the  &lt;em&gt;&lt;strong&gt;Hugo&lt;/strong&gt;&lt;/em&gt; &lt;a href=&#34;http://gohugo.io/content/front-matter/&#34;&gt;Front Matter&lt;/a&gt; documentation.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_6&#34;&gt;Content and Non-content Menu in Sidebar&lt;/h3&gt;
+
+&lt;p&gt;By default, &lt;em&gt;&lt;strong&gt;Hugo&lt;/strong&gt;&lt;/em&gt; will put the document title into sidebar document menu. That behavior can be changed with the &lt;code&gt;sidebar = false&lt;/code&gt; line in the front matter.&lt;/p&gt;
+
+&lt;p&gt;Apart from the content menu entries, the sidebar menu may contain entries that aren’t attached to any document in &lt;code&gt;contentdir&lt;/code&gt;. This takes place in the sitewide config file. For example, to add the menu item that links to the video from a Webinar that is hosted somewhere else, the following lines must be added to the sitewide config file (&lt;code&gt;name&lt;/code&gt; and &lt;code&gt;url&lt;/code&gt; are mandatory while &lt;code&gt;weight&lt;/code&gt; and &lt;code&gt;identifier&lt;/code&gt; are optional):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[[menu.extramedia]]
+    name = &amp;quot;Webinar: IOOS Biological Data Enrollment Process (video)&amp;quot;
+    url = &amp;quot;https://mmancusa.webex.com/mmancusa/ldr.php?RCID=a08a97a20c0328828c0bc2f4e07f0fa2&amp;quot;
+    weight = -110
+    identifier = &amp;quot;video&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;NOTE:&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;The original templates from &lt;a href=&#34;https://github.com/tummychow/lanyon-hugo&#34;&gt;&lt;em&gt;&lt;strong&gt;Lanyon&lt;/strong&gt;&lt;/em&gt;&lt;/a&gt; theme have been modified to allow adding items to the &lt;code&gt;extramedia&lt;/code&gt; menu. Adding other non-content menus will require further modification of the &lt;code&gt;.\layouts\partial\sidebar.html&lt;/code&gt; template.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;For more detailed information on menus definition, refer to a &lt;a href=&#34;http://gohugo.io/extras/menus/&#34;&gt;corresponding part&lt;/a&gt; of &lt;em&gt;&lt;strong&gt;Hugo&lt;/strong&gt;&lt;/em&gt; documentation.&lt;/p&gt;
+
+&lt;h1 id=&#34;toc_7&#34;&gt;Workflow for IOOS Documentation Website deployment on GitHub&lt;/h1&gt;
+
+&lt;p&gt;The  &lt;em&gt;&lt;strong&gt;Hugo&lt;/strong&gt;&lt;/em&gt; IOOS DMAC Documentation website can be created from any GitHub documentation repository by following a few simple procedures below.&lt;/p&gt;
+
+&lt;h2 id=&#34;toc_8&#34;&gt;Create and Debug a Hugo Site&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Clone the repository from &lt;code&gt;github.com/IOOS&lt;/code&gt;, or create the repository in the local directory.&lt;/li&gt;
+&lt;li&gt;Copy the files from IOOS Hugo Skeleton into the local repository directory.&lt;/li&gt;
+&lt;li&gt;Copy or move the Markdown files into &lt;code&gt;./content&lt;/code&gt; directory, and all images into &lt;code&gt;.static/images&lt;/code&gt; directory.&lt;/li&gt;
+&lt;li&gt;Edit the &lt;code&gt;./config.toml&lt;/code&gt; file as needed to fit the project. Set up &lt;code&gt;baseurl = &amp;quot;http://ioos.github.io/repository-name&amp;quot;&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Add front matter to each Markdown document in the &lt;code&gt;./content&lt;/code&gt; directory, and edit documents as needed.&lt;/li&gt;
+&lt;li&gt;Edit &lt;code&gt;./layouts/index.html&lt;/code&gt; template and other templates in &lt;code&gt;./layouts&lt;/code&gt; directory as needed to fit the project.&lt;/li&gt;
+&lt;li&gt;Edit the &lt;code&gt;./README.md&lt;/code&gt; file as needed to fit the project.&lt;/li&gt;
+&lt;li&gt;Run &lt;em&gt;&lt;strong&gt;Hugo&lt;/strong&gt;&lt;/em&gt; with options in the local repository root directory: &lt;strong&gt;&lt;code&gt;hugo server --watch&lt;/code&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Repeat steps 5 to 7 as needed to produce the satisfactory looking website.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;The command &lt;em&gt;&lt;strong&gt;hugo server &amp;ndash;watch&lt;/strong&gt;&lt;/em&gt; starts a web server available at &amp;ldquo;&lt;strong&gt;&lt;a href=&#34;http://localhost:1313/repository-name/&#34;&gt;http://localhost:1313/repository-name/&lt;/a&gt;&lt;/strong&gt;&amp;rdquo;, generates website content in the &lt;code&gt;./public&lt;/code&gt; directory,  watches source files for changes, recreates the web content as needed, and automatically reload any open pages in browser. After the website development and debugging is completed, the final version of the site should be deployed on GitHub Pages.&lt;/p&gt;
+
+&lt;h2 id=&#34;toc_9&#34;&gt;Deploy with a Git Subtree Mirroring&lt;/h2&gt;
+
+&lt;p&gt;GitHub Pages will serve up a website for any repository that has a branch called &lt;code&gt;gh-pages&lt;/code&gt; with a valid &lt;code&gt;index.html&lt;/code&gt; file at that branch&amp;rsquo;s root. To keep an adequate separation between the &lt;code&gt;master&lt;/code&gt; and &lt;code&gt;gh-pages&lt;/code&gt; branches, and at the same time make a deployment process visual and simple, the developers of &lt;em&gt;&lt;strong&gt;Hugo&lt;/strong&gt;&lt;/em&gt; suggested a workflow that is based on use of the &lt;code&gt;git subtree&lt;/code&gt; family of commands. It allows to mirror the entire &lt;code&gt;public&lt;/code&gt; directory (which contains the generated website) into the root of the &lt;code&gt;gh-pages&lt;/code&gt; branch of the repository. As a result, all content modification can be done on the &lt;code&gt;master&lt;/code&gt; branch, and after &lt;em&gt;&lt;strong&gt;Hugo&lt;/strong&gt;&lt;/em&gt; has generated the site output into the &lt;code&gt;public&lt;/code&gt; directory it can be pushed directly to the correct place for GitHub Pages to serve the website. &lt;em&gt;&lt;strong&gt;Hugo&lt;/strong&gt;&lt;/em&gt;  &lt;a href=&#34;http://gohugo.io/tutorials/github_pages_blog/&#34;&gt;&amp;ldquo;&lt;em&gt;Hosting on GitHub Pages&lt;/em&gt;&amp;ldquo;&lt;/a&gt; tutorial provides a detailed step-by-step description, and the following is a condensed and adapted to the IOOS case version of that workflow:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    1. Create a new orphand branch (no commit history) named gh-pages
+         git checkout --orphan gh-pages
+
+    2. Unstage all files
+        git rm --cached $(git ls-files)
+
+    3. Grab one file from the master branch so we can make a commit
+        git checkout master README.md
+
+    4. Add and commit that file
+        git add README.md
+        git commit -m &amp;quot;INIT: initial commit on gh-pages branch&amp;quot;
+
+    5. Push to remote gh-pages branch 
+        git push origin gh-pages
+
+    6. Return to master branch
+        git checkout master
+
+    7. Remove the public folder to make room for the gh-pages subtree
+        rm -rf public        
+
+    8. Add the gh-pages branch of the repository. It will look like a folder named public
+        git subtree add --prefix public git@github.com:[some-repository-name].git gh-pages --squash
+
+    9. Pull down the file we just committed (totally optional step but helps avoid merge conflicts)
+        git subtree pull --prefix=public
+
+    10. Run Hugo. Generated site will be placed in public directory
+         hugo
+
+    11. Add everything
+         git add -A
+
+    12. Commit and push to master
+         git commit -m &amp;quot;Updating site&amp;quot; 
+         git push origin master
+
+     13. Push the public subtree to the gh-pages branch
+          git subtree push --prefix=public git@github.com:[some-repository-name].git gh-pages
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;After initial deployment, any update of the website would include steps 10 through 13 apart from the creation/update of the content and verification of the generated website. These 4 steps are the same every time content is added or modified. It would be much easier, if that repetitive process is automated with some sort of script. A couple of Linux Bash scripts was developed by Dana Woodman for the &lt;a href=&#34;https://github.com/chimera/chimeraarts.org&#34;&gt;Chimer Arta &amp;amp; Maker Space&lt;/a&gt; website to automate &lt;a href=&#34;https://github.com/chimera/chimeraarts.org/blob/master/preview&#34;&gt;preview&lt;/a&gt; and &lt;a href=&#34;https://github.com/chimera/chimeraarts.org/blob/master/publish&#34;&gt;publish&lt;/a&gt; processes. The latter script was then adopted by Spencer Lyon, and modified into &lt;a href=&#34;https://github.com/spencerlyon2/hugo_gh_blog/blob/master/deploy.sh&#34;&gt;&lt;code&gt;deploy.sh&lt;/code&gt;&lt;/a&gt;. That script allows to replace the last four items from the above workflow list with a single command &lt;code&gt;bash deploy.sh&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;NOTES:&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;The workflow was developed for Linux. On Windows, some command either have to be modified (e.g. &lt;code&gt;rm -rf&lt;/code&gt; to &lt;code&gt;rmdir c:\test /s /q&lt;/code&gt;), or Linux native commands can be used with the Linux &lt;a href=&#34;http://gnuwin32.sourceforge.net/packages.html&#34;&gt;CoreUtils&lt;/a&gt; installed.&lt;/li&gt;
+&lt;li&gt;To allow running Bash scripts on Windows, some Bash shell software for Windows has to be installed. For example, Bash shell is included into a standard &lt;a href=&#34;https://windows.github.com/&#34;&gt;GitHub for windows&lt;/a&gt; installation package.&lt;/li&gt;
+&lt;li&gt;All &lt;code&gt;git&lt;/code&gt; commands have to be run from the site &lt;code&gt;&amp;lt;root&amp;gt;&lt;/code&gt; directory, i.e. the directory, where the &lt;code&gt;content&lt;/code&gt; (or another directory defined as &lt;code&gt;contentdir&lt;/code&gt;) and &lt;code&gt;layout&lt;/code&gt; sub-directories are located).&lt;/li&gt;
+&lt;li&gt;The &lt;code&gt;[some-repository-name]&lt;/code&gt; has to be changed to the real repository GitHub address, e.g. &lt;code&gt;ioos/sos-guidelines&lt;/code&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;toc_10&#34;&gt;Deploy with an Uncluttered Alternate Approach&lt;/h2&gt;
+
+&lt;p&gt;The above workflow works just great, and it had been used for a while for IOOS Git Pages deployment; however, it has a drawback: it requires the generated content of the &lt;code&gt;publishdir&lt;/code&gt; to be committed to the source (&lt;code&gt;master&lt;/code&gt;) branch. As a result, the &lt;code&gt;master&lt;/code&gt; branch becomes cluttered up with the files generated by &lt;em&gt;&lt;strong&gt;Hugo&lt;/strong&gt;&lt;/em&gt; that are only required on the &lt;code&gt;gh-pages&lt;/code&gt; branch.&lt;/p&gt;
+
+&lt;p&gt;A &lt;a href=&#34;http://gohugo.io/tutorials/github-pages-blog#toc_9&#34;&gt;different approach&lt;/a&gt; has been developed recently, which unlike the &lt;code&gt;git-subtree&lt;/code&gt; one does not require to commit the generated files to the &lt;code&gt;master&lt;/code&gt; branch. It keeps a linear history on the deploy branch and does not make superfluous commits or deploys when the generated files do not change.&lt;/p&gt;
+
+&lt;p&gt;For this approach, the Bash &lt;a href=&#34;https://github.com/X1011/git-directory-deploy&#34;&gt;script&lt;/a&gt; was developed that renders automatic almost all deployment process: the script takes care of everything apart from generating the website with &lt;em&gt;&lt;strong&gt;Hugo&lt;/strong&gt;&lt;/em&gt;; it can even create the &lt;code&gt;gh-pages&lt;/code&gt; branch of the repository if it does not exist. Although the script requires some initial configuration, the IOOS documentation GitHub Pages are so simple and highly similar that it can be used for each of them without any modification. From now on, the script &lt;code&gt;deploy.sh&lt;/code&gt; is included into the IOOS &lt;em&gt;&lt;strong&gt;Hugo&lt;/strong&gt;&lt;/em&gt; website skeleton set, and can be downloaded from any IOOS documentation repository.&lt;/p&gt;
+
+&lt;p&gt;With this script, the deployment process can be reduced to a few steps:&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_11&#34;&gt;configuration&lt;/h3&gt;
+
+&lt;p&gt;Edit the following variables within the script as needed to fit the project:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;deploy_directory&lt;/code&gt;: root of the tree of files to deploy. For IOOS websites the value is always &lt;strong&gt;&lt;code&gt;public&lt;/code&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;deploy_branch&lt;/code&gt;: branch to commit files to and push to origin:
+
+&lt;ul&gt;
+&lt;li&gt;for the root &lt;code&gt;ioos.github.io&lt;/code&gt; site, the value must be &lt;strong&gt;&lt;code&gt;master&lt;/code&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;for all other projects the value must be &lt;strong&gt;&lt;code&gt;gh-pages&lt;/code&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;default_username&lt;/code&gt;, &lt;code&gt;default_email&lt;/code&gt;: identity to use for git commits if none is set already. Usually no need to set up&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;repo&lt;/code&gt;: repository to deploy to (must be readable and writable). If script runs in the &lt;code&gt;repo&lt;/code&gt; root directory, the variable sets up automatically.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;toc_12&#34;&gt;setup&lt;/h3&gt;
+
+&lt;p&gt;Ensure configuration variables are correct in the script and run&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &lt;b&gt;&lt;code&gt;deploy.sh -s&lt;/code&gt;&lt;/b&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;Option &lt;code&gt;-s&lt;/code&gt; or &lt;code&gt;--setup&lt;/code&gt; makes the script perform one-time setup to prepare the repository for deployments: creates &lt;code&gt;deploy_branch&lt;/code&gt; (i.e. &lt;code&gt;gh-pages&lt;/code&gt;), initializes it with the contents of &lt;code&gt;deploy_directory&lt;/code&gt; (i.e. &lt;code&gt;public&lt;/code&gt;), and pushes it to remote repository.&lt;/p&gt;
+
+&lt;p&gt;If the &lt;code&gt;deploy_branch&lt;/code&gt; exists, running the script with a setup option will fail. Since &lt;code&gt;master&lt;/code&gt; branch is always an integral part of any repository, this option should not be used for &lt;code&gt;ioos.github.io&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_13&#34;&gt;run&lt;/h3&gt;
+
+&lt;p&gt;Do the following every time you want to deploy:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;check out the &lt;strong&gt;default&lt;/strong&gt; branch or commit of the source (useful if somebody else might make changes to the source that you are not aware of); the script will use this commit to generate a message when it makes its own commit on the &lt;code&gt;deploy branch&lt;/code&gt;
+
+&lt;ul&gt;
+&lt;li&gt;for &lt;code&gt;ioos.github.io&lt;/code&gt; site, the default branch is &lt;strong&gt;&lt;code&gt;new-website&lt;/code&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;for all other project websites, the default branch is &lt;strong&gt;&lt;code&gt;master&lt;/code&gt;&lt;/strong&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;generate the files in &lt;code&gt;deploy_directory&lt;/code&gt; (i.e. &lt;code&gt;publish&lt;/code&gt;). Just run &lt;em&gt;&lt;strong&gt;Hugo&lt;/strong&gt;&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;make sure no uncommitted changes left in git&amp;rsquo;s index, otherwise the script will abort (it is OK to have uncommitted files in the work tree; the script does not touch the work tree).&lt;/li&gt;
+&lt;li&gt;make sure you are in the project&amp;rsquo;s root directory&lt;/li&gt;
+&lt;li&gt;run &lt;code&gt;deploy.sh&lt;/code&gt; with or without any of the following options:
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;-v&lt;/code&gt; or &lt;code&gt;--verbose&lt;/code&gt; echo commands as they are executed; it is recommended for debugging if something goes wrong;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-e&lt;/code&gt; or &lt;code&gt;--allow-empty&lt;/code&gt; allow deployment of an empty &lt;code&gt;public&lt;/code&gt; directory (by default, the script will abort if &lt;code&gt;deploy_directory&lt;/code&gt; is empty).&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;NOTES:&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;Because of the differences described above, the script for the &lt;code&gt;ioos.github.io&lt;/code&gt; is also different; to distinguish the script for the &lt;code&gt;ioos.github.io&lt;/code&gt; from the others, it has been renamed to &lt;code&gt;deploy-io.sh&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;To allow running &lt;code&gt;deploy.sh&lt;/code&gt; script on Windows, some Bash shell software for Windows has to be installed. For example, Bash shell is included into a standard &lt;a href=&#34;https://windows.github.com/&#34;&gt;GitHub for windows&lt;/a&gt; installation package.&lt;/li&gt;
+&lt;li&gt;The above procedure assumes that the script runs from the site &lt;code&gt;&amp;lt;root&amp;gt;&lt;/code&gt; directory, i.e. the directory, where the &lt;code&gt;content&lt;/code&gt; (or another directory defined as &lt;code&gt;contentdir&lt;/code&gt;) and &lt;code&gt;layout&lt;/code&gt; sub-directories are located).&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+</description>
+        </item>
+      
+    
+
   </channel>
 </rss>
