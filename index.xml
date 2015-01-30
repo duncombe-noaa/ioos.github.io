@@ -22,45 +22,79 @@
 
 &lt;p&gt;&lt;a name=&#34;System Integration Test&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;toc_1&#34;&gt;System Integration Test&lt;/h2&gt;
-
-&lt;p&gt;The &lt;a href=&#34;https://github.com/ioos/system-test&#34;&gt;system integration test development site on github&lt;/a&gt; contains IPython notebooks demonstrating how to access data from servers in various scenarios.&lt;/p&gt;
-
-&lt;h2 id=&#34;toc_2&#34;&gt;ncSOS&lt;/h2&gt;
-
-&lt;h2 id=&#34;toc_3&#34;&gt;i52N and related activities like sensor web harvesters&lt;/h2&gt;
-
-&lt;h1 id=&#34;toc_4&#34;&gt;Guidelines and specifications&lt;/h1&gt;
-
-&lt;h2 id=&#34;toc_5&#34;&gt;Data Provider Guidelines&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.ioos.noaa.gov/data/contribute_data.html&#34;&gt;&lt;em&gt;&lt;strong&gt;Guidance for Implementation of the Integrated Ocean Observing System (IOOS) Data Management and Communications (DMAC) Subsystem&lt;/strong&gt;&lt;/em&gt;&lt;/a&gt; - the responsibilities of an IOOS Data Provider published on the official IOOS Web site.&lt;/p&gt;
-
-&lt;h2 id=&#34;toc_6&#34;&gt;SOS Guidelines&lt;/h2&gt;
-
-&lt;p&gt;A website with &lt;a href=&#34;http://ioos.github.io/sos-guidelines&#34;&gt;Documentation on using SOS&lt;/a&gt; that includes:&lt;/p&gt;
+&lt;h2 id=&#34;toc_1&#34;&gt;IOOS Catalog of Services and Datasets&lt;/h2&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Overview of SOS activities in IOOS based on Alex&amp;rsquo;s one page summary&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;WSDD&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;Templates&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;Testing/Compliance&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://catalog.ioos.us&#34;&gt;IOOS Web Catalog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/ioos/&#34;&gt;GitHub repository&lt;/a&gt; that holds source codes and modules of the IOOS Catalog&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;toc_7&#34;&gt;netCDF and/or opendap guidelines&lt;/h2&gt;
+&lt;h2 id=&#34;toc_2&#34;&gt;&lt;a href=&#34;https://github.com/ioos/system-test&#34;&gt;System Integration Test&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;The system integration test development site on github contains IPython notebooks demonstrating how to access data from servers in various scenarios.&lt;/p&gt;
+
+&lt;h2 id=&#34;toc_3&#34;&gt;&lt;a href=&#34;https://github.com/asascience-open/ncSOS&#34;&gt;ncSOS&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;NcSOS adds an OGC SOS service to datasets in your existing THREDDS server. It complies with the &lt;a href=&#34;https://github.com/ioos/sos-guidelines/tree/master/template/milestone1.0&#34;&gt;IOOS SWE Milestone 1.0 templates&lt;/a&gt; and requires your datasets be in any of the &lt;a href=&#34;http://cfconventions.org/Data/cf-conventions/cf-conventions-1.6/build/cf-conventions.html#discrete-sampling-geometries&#34;&gt;CF 1.6 Discrete Sampling Geometries&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;toc_4&#34;&gt;i52N and related activities like sensor web harvesters&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://ioos.github.io/i52n-sos/&#34;&gt;i52N-SOS&lt;/a&gt;, an IOOS customized build of the &lt;a href=&#34;http://52north.org/sos&#34;&gt;52°North Sensor Observation Service (SOS)&lt;/a&gt; that extends the stock upstream &lt;a href=&#34;https://github.com/52North/SOS&#34;&gt;52°North SOS&lt;/a&gt; with IOOS specific encoding formats, test data, and more.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/ioos/ioos-sos-compliance-tests&#34;&gt;IOOS SOS Compliance Test Tool&lt;/a&gt;, a set of CTL (&lt;a href=&#34;http://portal.opengeospatial.org/files/?artifact_id=33085&#34;&gt;compliance test language&lt;/a&gt;) files and utility scripts to test IOOS SOS implementations.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/ioos/ioos-sos-validator&#34;&gt;IOOS SOS Validator&lt;/a&gt; for simple schema validation of SOS responses and templates&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;toc_5&#34;&gt;Guidelines and specifications&lt;/h1&gt;
+
+&lt;h2 id=&#34;toc_6&#34;&gt;&lt;a href=&#34;http://www.ioos.noaa.gov/data/contribute_data.html&#34;&gt;Data Provider Guidelines&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;The &lt;em&gt;&lt;strong&gt;Guidance for Implementation of the Integrated Ocean Observing System (IOOS) Data Management and Communications (DMAC) Subsystem&lt;/strong&gt;&lt;/em&gt; describes the responsibilities of an IOOS Data Provider published on the official IOOS Web site.&lt;/p&gt;
+
+&lt;h2 id=&#34;toc_7&#34;&gt;&lt;a href=&#34;http://ioos.github.io/sos-guidelines&#34;&gt;SOS Guidelines&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;A website with documentation on using IOOS SOS v1.0 that includes:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://ioos.github.io/sos-guidelines/about/&#34;&gt;Overview of SOS activities in IOOS&lt;/a&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://ioos.github.io/sos-guidelines/doc/wsdd/sos_wsdd_github_notoc/&#34;&gt;IOOS SOS 1.0 Web Service Description Document&lt;/a&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://ioos.github.io/sos-guidelines/template/&#34;&gt;IOOS SOS Profile Templates&lt;/a&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://ioos.github.io/sos-guidelines/doc/testing/sos_test_list_github_notoc_summary/&#34;&gt;List of IOOS-specific compliance tests&lt;/a&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;toc_8&#34;&gt;netCDF and/or opendap guidelines&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;See [&lt;a href=&#34;https://github.com/dpsnowden/netcdf-guidelines&#34;&gt;https://github.com/dpsnowden/netcdf-guidelines&lt;/a&gt;] for some initial ideas on what this needs to contain.&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/ioos/compliance-checker&#34;&gt;IOOS Compliance Checker&lt;/a&gt; tool to check local/remote netCDF datasets against a variety of compliance standards.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;toc_8&#34;&gt;ioos-csv-tsv&lt;/h2&gt;
+&lt;h2 id=&#34;toc_9&#34;&gt;&lt;a href=&#34;http://ioos.github.io/ioos-csv-tsv/&#34;&gt;Data encoding in CSV/TSV&lt;/a&gt;&lt;/h2&gt;
 
-&lt;h2 id=&#34;toc_9&#34;&gt;Asset Identifiers&lt;/h2&gt;
+&lt;p&gt;The &lt;em&gt;&lt;strong&gt;IOOS Convention for observation data encoding in CSV/TSV&lt;/strong&gt;&lt;/em&gt; document describes the rukes and constraints for encoding observation data as plain text Comma-Separated Values (CSV) or Tab-Separated Values (TSV).&lt;/p&gt;
 
-&lt;h2 id=&#34;toc_10&#34;&gt;Vocabularies&lt;/h2&gt;
+&lt;h2 id=&#34;toc_10&#34;&gt;&lt;a href=&#34;http://ioos.github.io/conventions-for-observing-asset-identifiers/&#34;&gt;Asset Identifiers&lt;/a&gt;&lt;/h2&gt;
 
-&lt;h1 id=&#34;toc_11&#34;&gt;Contributing and changes&lt;/h1&gt;
+&lt;p&gt;The &lt;em&gt;&lt;strong&gt;IOOS Conventions for Observing Asset Identifiers&lt;/strong&gt;&lt;/em&gt; document describes the conventions used by the Integrated Ocean Observing System (IOOS) program to assign an identifier to IOOS-related observing assets including measurement stations, platforms and sensors.&lt;/p&gt;
+
+&lt;h2 id=&#34;toc_11&#34;&gt;&lt;a href=&#34;https://ioos.github.io/vocabularies&#34;&gt;Vocabularies&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;A collection of the Instructions and Guidelines for use of Controlled Vocabularies in IOOS-compliant data services.&lt;/p&gt;
+
+&lt;h2 id=&#34;toc_12&#34;&gt;&lt;a href=&#34;http://ioos.github.io/animal-telemetry/&#34;&gt;Data Services for Animal Telemetry&lt;/a&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;A brief &lt;a href=&#34;http://ioos.github.io/animal-telemetry/about/&#34;&gt;description&lt;/a&gt; of the National Animal Telemetry Network (ATN).&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://ioos.github.io/animal-telemetry/animal-telemetry-plan/&#34;&gt;Strategic Plan And Recommendations&lt;/a&gt; for a National ATN through U.S. IOOS&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;toc_13&#34;&gt;Biological Data Services&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://ioos.github.io/biological-data-services/&#34;&gt;Data Enrollment Process&lt;/a&gt; proposed and supported by IOOS DMAC to support sharing and integration of aquatic biological data.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;toc_14&#34;&gt;Contributing and changes&lt;/h1&gt;
 
 &lt;p&gt;To make changes to this website and add information, see the &lt;a href=&#34;website_deployment_workflow_updated&#34;&gt;Website Deployment Workflow&lt;/a&gt; page.&lt;/p&gt;
 </description>
