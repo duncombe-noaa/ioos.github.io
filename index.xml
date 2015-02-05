@@ -106,7 +106,7 @@
     
       
         <item>
-          <title>Deployment of IOOS Websites on GitHub</title>
+          <title>Hosting on IOOS GitHub Pages Workflow</title>
           <link>http://ioos.github.io/website_deployment_workflow_updated/</link>
           <pubDate>Tue, 04 Mar 2014 07:56:39 UTC</pubDate>
           <author></author>
@@ -304,114 +304,43 @@ url = &amp;quot;index.html&amp;quot;
 
 &lt;p&gt;The command &lt;em&gt;&lt;strong&gt;hugo server &amp;ndash;watch&lt;/strong&gt;&lt;/em&gt; starts a web server available at &amp;ldquo;&lt;strong&gt;&lt;a href=&#34;http://localhost:1313/repository-name/&#34;&gt;http://localhost:1313/repository-name/&lt;/a&gt;&lt;/strong&gt;&amp;rdquo;, generates website content in the &lt;code&gt;./public&lt;/code&gt; directory,  watches source files for changes, recreates the web content as needed, and automatically reload any open pages in browser. After the website development and debugging is completed, the final version of the site should be deployed on GitHub Pages.&lt;/p&gt;
 
-&lt;h2 id=&#34;toc_9&#34;&gt;Deploy with a Git Subtree Mirroring&lt;/h2&gt;
+&lt;h2 id=&#34;toc_9&#34;&gt;Deploy the Site to GitHub Pages&lt;/h2&gt;
 
-&lt;p&gt;GitHub Pages will serve up a website for any repository that has a branch called &lt;code&gt;gh-pages&lt;/code&gt; with a valid &lt;code&gt;index.html&lt;/code&gt; file at that branch&amp;rsquo;s root. To keep an adequate separation between the &lt;code&gt;master&lt;/code&gt; and &lt;code&gt;gh-pages&lt;/code&gt; branches, and at the same time make a deployment process visual and simple, the developers of &lt;em&gt;&lt;strong&gt;Hugo&lt;/strong&gt;&lt;/em&gt; suggested a workflow that is based on use of the &lt;code&gt;git subtree&lt;/code&gt; family of commands. It allows to mirror the entire &lt;code&gt;public&lt;/code&gt; directory (which contains the generated website) into the root of the &lt;code&gt;gh-pages&lt;/code&gt; branch of the repository. As a result, all content modification can be done on the &lt;code&gt;master&lt;/code&gt; branch, and after &lt;em&gt;&lt;strong&gt;Hugo&lt;/strong&gt;&lt;/em&gt; has generated the site output into the &lt;code&gt;public&lt;/code&gt; directory it can be pushed directly to the correct place for GitHub Pages to serve the website. &lt;em&gt;&lt;strong&gt;Hugo&lt;/strong&gt;&lt;/em&gt;  &lt;a href=&#34;http://gohugo.io/tutorials/github_pages_blog/&#34;&gt;&amp;ldquo;&lt;em&gt;Hosting on GitHub Pages&lt;/em&gt;&amp;ldquo;&lt;/a&gt; tutorial provides a detailed step-by-step description, and the following is a condensed and adapted to the IOOS case version of that workflow:&lt;/p&gt;
+&lt;p&gt;GitHub Pages will serve up a website for any project repository that has a branch called &lt;code&gt;gh-pages&lt;/code&gt; with a valid &lt;code&gt;index.html&lt;/code&gt; file at that branch&amp;rsquo;s root. For the organization/user repository (e.g. &lt;code&gt;ioos.github.io&lt;/code&gt;), however, the GitHub Pages serve content of the &lt;code&gt;master&lt;/code&gt; branch itself. That may make a deployment of the generated website to GitHub a convoluted process, and unnecessary clutter up the default and deploy repository branches.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;    1. Create a new orphand branch (no commit history) named gh-pages
-         git checkout --orphan gh-pages
+&lt;p&gt;A simple and visual deployment workflow based on the &lt;em&gt;&lt;strong&gt;Hugo&amp;rsquo;s&lt;/strong&gt;&lt;/em&gt;  &lt;a href=&#34;http://gohugo.io/tutorials/github_pages_blog/&#34;&gt;&amp;ldquo;&lt;em&gt;Hosting on GitHub Pages&lt;/em&gt;&amp;ldquo;&lt;/a&gt; tutorial helps untangle the deployment process, and keep an adequate separation between the default and deploy branches. The workflow allows a direct push of the entire content of the generated website to the correct remote repository&amp;rsquo;s branch. It does not stipulate for the commit of generated files to the remote default branch, does not make superfluous commits or deploys when the generated files do not change, and allows keeping a linear history on the deploy branch.&lt;/p&gt;
 
-    2. Unstage all files
-        git rm --cached $(git ls-files)
-
-    3. Grab one file from the master branch so we can make a commit
-        git checkout master README.md
-
-    4. Add and commit that file
-        git add README.md
-        git commit -m &amp;quot;INIT: initial commit on gh-pages branch&amp;quot;
-
-    5. Push to remote gh-pages branch 
-        git push origin gh-pages
-
-    6. Return to master branch
-        git checkout master
-
-    7. Remove the public folder to make room for the gh-pages subtree
-        rm -rf public        
-
-    8. Add the gh-pages branch of the repository. It will look like a folder named public
-        git subtree add --prefix public git@github.com:[some-repository-name].git gh-pages --squash
-
-    9. Pull down the file we just committed (totally optional step but helps avoid merge conflicts)
-        git subtree pull --prefix=public
-
-    10. Run Hugo. Generated site will be placed in public directory
-         hugo
-
-    11. Add everything
-         git add -A
-
-    12. Commit and push to master
-         git commit -m &amp;quot;Updating site&amp;quot; 
-         git push origin master
-
-     13. Push the public subtree to the gh-pages branch
-          git subtree push --prefix=public git@github.com:[some-repository-name].git gh-pages
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;After initial deployment, any update of the website would include steps 10 through 13 apart from the creation/update of the content and verification of the generated website. These 4 steps are the same every time content is added or modified. It would be much easier, if that repetitive process is automated with some sort of script. A couple of Linux Bash scripts was developed by Dana Woodman for the &lt;a href=&#34;https://github.com/chimera/chimeraarts.org&#34;&gt;Chimer Arta &amp;amp; Maker Space&lt;/a&gt; website to automate &lt;a href=&#34;https://github.com/chimera/chimeraarts.org/blob/master/preview&#34;&gt;preview&lt;/a&gt; and &lt;a href=&#34;https://github.com/chimera/chimeraarts.org/blob/master/publish&#34;&gt;publish&lt;/a&gt; processes. The latter script was then adopted by Spencer Lyon, and modified into &lt;a href=&#34;https://github.com/spencerlyon2/hugo_gh_blog/blob/master/deploy.sh&#34;&gt;&lt;code&gt;deploy.sh&lt;/code&gt;&lt;/a&gt;. That script allows to replace the last four items from the above workflow list with a single command &lt;code&gt;bash deploy.sh&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;NOTES:&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;ol&gt;
-&lt;li&gt;The workflow was developed for Linux. On Windows, some command either have to be modified (e.g. &lt;code&gt;rm -rf&lt;/code&gt; to &lt;code&gt;rmdir c:\test /s /q&lt;/code&gt;), or Linux native commands can be used with the Linux &lt;a href=&#34;http://gnuwin32.sourceforge.net/packages.html&#34;&gt;CoreUtils&lt;/a&gt; installed.&lt;/li&gt;
-&lt;li&gt;To allow running Bash scripts on Windows, some Bash shell software for Windows has to be installed. For example, Bash shell is included into a standard &lt;a href=&#34;https://windows.github.com/&#34;&gt;GitHub for windows&lt;/a&gt; installation package.&lt;/li&gt;
-&lt;li&gt;All &lt;code&gt;git&lt;/code&gt; commands have to be run from the site &lt;code&gt;&amp;lt;root&amp;gt;&lt;/code&gt; directory, i.e. the directory, where the &lt;code&gt;content&lt;/code&gt; (or another directory defined as &lt;code&gt;contentdir&lt;/code&gt;) and &lt;code&gt;layout&lt;/code&gt; sub-directories are located).&lt;/li&gt;
-&lt;li&gt;The &lt;code&gt;[some-repository-name]&lt;/code&gt; has to be changed to the real repository GitHub address, e.g. &lt;code&gt;ioos/sos-guidelines&lt;/code&gt;.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&#34;toc_10&#34;&gt;Deploy with an Uncluttered Alternate Approach&lt;/h2&gt;
-
-&lt;p&gt;The above workflow works just great, and it had been used for a while for IOOS Git Pages deployment; however, it has a drawback: it requires the generated content of the &lt;code&gt;publishdir&lt;/code&gt; to be committed to the source (&lt;code&gt;master&lt;/code&gt;) branch. As a result, the &lt;code&gt;master&lt;/code&gt; branch becomes cluttered up with the files generated by &lt;em&gt;&lt;strong&gt;Hugo&lt;/strong&gt;&lt;/em&gt; that are only required on the &lt;code&gt;gh-pages&lt;/code&gt; branch.&lt;/p&gt;
-
-&lt;p&gt;A &lt;a href=&#34;http://gohugo.io/tutorials/github-pages-blog#toc_9&#34;&gt;different approach&lt;/a&gt; has been developed recently, which unlike the &lt;code&gt;git-subtree&lt;/code&gt; one does not require to commit the generated files to the &lt;code&gt;master&lt;/code&gt; branch. It keeps a linear history on the deploy branch and does not make superfluous commits or deploys when the generated files do not change.&lt;/p&gt;
-
-&lt;p&gt;For this approach, the Bash &lt;a href=&#34;https://github.com/X1011/git-directory-deploy&#34;&gt;script&lt;/a&gt; was developed that renders automatic almost all deployment process: the script takes care of everything apart from generating the website with &lt;em&gt;&lt;strong&gt;Hugo&lt;/strong&gt;&lt;/em&gt;; it can even create the &lt;code&gt;gh-pages&lt;/code&gt; branch of the repository if it does not exist. Although the script requires some initial configuration, the IOOS documentation GitHub Pages are so simple and highly similar that it can be used for each of them without any modification. From now on, the script &lt;code&gt;deploy.sh&lt;/code&gt; is included into the IOOS &lt;em&gt;&lt;strong&gt;Hugo&lt;/strong&gt;&lt;/em&gt; website skeleton set, and can be downloaded from any IOOS documentation repository.&lt;/p&gt;
+&lt;p&gt;The core element of the workflow is the Bash &lt;a href=&#34;https://github.com/X1011/git-directory-deploy&#34;&gt;script&lt;/a&gt; &lt;code&gt;deploy.sh&lt;/code&gt; that renders automatic the deployment process apart from generating the website with &lt;em&gt;&lt;strong&gt;Hugo&lt;/strong&gt;&lt;/em&gt;: it creates a deploy branch of the remote repository, and commits the website content to it. Although the script requires some initial configuration, the IOOS documentation GitHub Pages are so simple and highly similar that it can be used for each of them without any modification; each repository includes the pre-configured copy of the script.&lt;/p&gt;
 
 &lt;p&gt;With this script, the deployment process can be reduced to a few steps:&lt;/p&gt;
 
-&lt;h3 id=&#34;toc_11&#34;&gt;configuration&lt;/h3&gt;
+&lt;h3 id=&#34;toc_10&#34;&gt;&lt;em&gt;configuration&lt;/em&gt;&lt;/h3&gt;
 
 &lt;p&gt;Edit the following variables within the script as needed to fit the project:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;deploy_directory&lt;/code&gt;: root of the tree of files to deploy. For IOOS websites the value is always &lt;strong&gt;&lt;code&gt;public&lt;/code&gt;&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;deploy_branch&lt;/code&gt;: branch to commit files to and push to origin:
-
-&lt;ul&gt;
-&lt;li&gt;for the root &lt;code&gt;ioos.github.io&lt;/code&gt; site, the value must be &lt;strong&gt;&lt;code&gt;master&lt;/code&gt;&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;for all other projects the value must be &lt;strong&gt;&lt;code&gt;gh-pages&lt;/code&gt;&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;default_username&lt;/code&gt;, &lt;code&gt;default_email&lt;/code&gt;: identity to use for git commits if none is set already. Usually no need to set up&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;deploy_directory&lt;/code&gt;: root of the tree of files to deploy; must match the value of the &lt;code&gt;publishdir&lt;/code&gt; in the &lt;a href=&#34;#toc_3&#34;&gt;site config file&lt;/a&gt;. For IOOS websites the value is always &lt;code&gt;public&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;deploy_branch&lt;/code&gt;: branch to commit files to and push to origin. For projects the value is &lt;code&gt;gh-pages&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;default_username&lt;/code&gt;, &lt;code&gt;default_email&lt;/code&gt;: identity to use for git commits if none is set already. Usually no need to set up.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;repo&lt;/code&gt;: repository to deploy to (must be readable and writable). If script runs in the &lt;code&gt;repo&lt;/code&gt; root directory, the variable sets up automatically.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;toc_12&#34;&gt;setup&lt;/h3&gt;
+&lt;h3 id=&#34;toc_11&#34;&gt;&lt;em&gt;setup&lt;/em&gt;&lt;/h3&gt;
 
 &lt;p&gt;Ensure configuration variables are correct in the script and run&lt;/p&gt;
 
-&lt;p&gt;&amp;nbsp; &amp;nbsp; &lt;b&gt;&lt;code&gt;deploy.sh -s&lt;/code&gt;&lt;/b&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;  &lt;em&gt;&lt;strong&gt;deploy.sh -s&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;Option &lt;code&gt;-s&lt;/code&gt; or &lt;code&gt;--setup&lt;/code&gt; makes the script perform one-time setup to prepare the repository for deployments: creates &lt;code&gt;deploy_branch&lt;/code&gt; (i.e. &lt;code&gt;gh-pages&lt;/code&gt;), initializes it with the contents of &lt;code&gt;deploy_directory&lt;/code&gt; (i.e. &lt;code&gt;public&lt;/code&gt;), and pushes it to remote repository.&lt;/p&gt;
 
-&lt;p&gt;If the &lt;code&gt;deploy_branch&lt;/code&gt; exists, running the script with a setup option will fail. Since &lt;code&gt;master&lt;/code&gt; branch is always an integral part of any repository, this option should not be used for &lt;code&gt;ioos.github.io&lt;/code&gt;.&lt;/p&gt;
-
-&lt;h3 id=&#34;toc_13&#34;&gt;run&lt;/h3&gt;
+&lt;h3 id=&#34;toc_12&#34;&gt;&lt;em&gt;run&lt;/em&gt;&lt;/h3&gt;
 
 &lt;p&gt;Do the following every time you want to deploy:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;check out the &lt;strong&gt;default&lt;/strong&gt; branch or commit of the source (useful if somebody else might make changes to the source that you are not aware of); the script will use this commit to generate a message when it makes its own commit on the &lt;code&gt;deploy branch&lt;/code&gt;
-
-&lt;ul&gt;
-&lt;li&gt;for &lt;code&gt;ioos.github.io&lt;/code&gt; site, the default branch is &lt;strong&gt;&lt;code&gt;new-website&lt;/code&gt;&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;for all other project websites, the default branch is &lt;strong&gt;&lt;code&gt;master&lt;/code&gt;&lt;/strong&gt;&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;generate the files in &lt;code&gt;deploy_directory&lt;/code&gt; (i.e. &lt;code&gt;publish&lt;/code&gt;). Just run &lt;em&gt;&lt;strong&gt;Hugo&lt;/strong&gt;&lt;/em&gt;.&lt;/li&gt;
-&lt;li&gt;make sure no uncommitted changes left in git&amp;rsquo;s index, otherwise the script will abort (it is OK to have uncommitted files in the work tree; the script does not touch the work tree).&lt;/li&gt;
+&lt;li&gt;check out the &lt;code&gt;master&lt;/code&gt; branch or commit of the source (useful if somebody else might make changes to the source that you are not aware of). The script will use this commit to generate a message when it makes its own commit on the deploy branch.&lt;/li&gt;
+&lt;li&gt;run &lt;em&gt;&lt;strong&gt;Hugo&lt;/strong&gt;&lt;/em&gt; without options to generate the files in &lt;code&gt;deploy_directory&lt;/code&gt; (i.e. &lt;code&gt;publish&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;make sure no uncommitted changes left in git&amp;rsquo;s index, otherwise the script will abort. Although it is OK to have uncommitted files in the work tree as the script does not touch the work tree, it is strongly recommended to commit and push all changes to the remote default branch before running the script.&lt;/li&gt;
 &lt;li&gt;make sure you are in the project&amp;rsquo;s root directory&lt;/li&gt;
 &lt;li&gt;run &lt;code&gt;deploy.sh&lt;/code&gt; with or without any of the following options:
 
@@ -425,9 +354,9 @@ url = &amp;quot;index.html&amp;quot;
 
 &lt;blockquote&gt;
 &lt;ol&gt;
-&lt;li&gt;Because of the differences described above, the script for the &lt;code&gt;ioos.github.io&lt;/code&gt; is also different; to distinguish the script for the &lt;code&gt;ioos.github.io&lt;/code&gt; from the others, it has been renamed to &lt;code&gt;deploy-io.sh&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;To allow running &lt;code&gt;deploy.sh&lt;/code&gt; script on Windows, some Bash shell software for Windows has to be installed. For example, Bash shell is included into a standard &lt;a href=&#34;https://windows.github.com/&#34;&gt;GitHub for windows&lt;/a&gt; installation package.&lt;/li&gt;
+&lt;li&gt;To allow running Bash scripts on Windows, some Bash shell software for Windows has to be installed. For example, Bash shell is included into a standard &lt;a href=&#34;https://windows.github.com/&#34;&gt;GitHub for windows&lt;/a&gt; installation package.&lt;/li&gt;
 &lt;li&gt;The above procedure assumes that the script runs from the site &lt;code&gt;&amp;lt;root&amp;gt;&lt;/code&gt; directory, i.e. the directory, where the &lt;code&gt;content&lt;/code&gt; (or another directory defined as &lt;code&gt;contentdir&lt;/code&gt;) and &lt;code&gt;layout&lt;/code&gt; sub-directories are located).&lt;/li&gt;
+&lt;li&gt;As GitHub Pages render the organization/user sites in a different way, the &lt;code&gt;deploy_branch&lt;/code&gt; value for the &lt;code&gt;ioos.github.io&lt;/code&gt; repository must be &lt;code&gt;master&lt;/code&gt; instead of &lt;code&gt;gh-pages&lt;/code&gt; (for the same reason, a &lt;code&gt;new-website&lt;/code&gt; branch has been set up as the default working branch instead of &lt;code&gt;master&lt;/code&gt;). To avoid confusion,  the name of the pre-configured script for the &lt;code&gt;ioos.github.io&lt;/code&gt; site has changed to &lt;code&gt;deploy-io.sh&lt;/code&gt;.&lt;br /&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/blockquote&gt;
 </description>

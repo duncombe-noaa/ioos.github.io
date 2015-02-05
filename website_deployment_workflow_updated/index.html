@@ -9,7 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
   <title>
     
-      Deployment of IOOS Websites on GitHub &middot; IOOS GITHUB PAGES
+      Hosting on IOOS GitHub Pages Workflow &middot; IOOS GITHUB PAGES
     
   </title>
 
@@ -58,7 +58,7 @@
       
     
       
-        <a class="sidebar-nav-item-list  active " href="http://ioos.github.io/website_deployment_workflow_updated/">Deployment of IOOS Websites on GitHub</a>
+        <a class="sidebar-nav-item-list  active " href="http://ioos.github.io/website_deployment_workflow_updated/">Hosting on IOOS GitHub Pages Workflow</a>
       
     
 </p>
@@ -95,7 +95,7 @@
 
 
 <div class="post">
-  <h1 class="post-title">Deployment of IOOS Websites on GitHub</h1>
+  <h1 class="post-title">Hosting on IOOS GitHub Pages Workflow</h1>
     <div id="toc" class="well col-md-4 col-sm-6">
     <nav id="TableOfContents">
 <ul>
@@ -113,12 +113,11 @@
 <li><a href="#toc_7">Workflow for IOOS Documentation Website deployment on GitHub</a>
 <ul>
 <li><a href="#toc_8">Create and Debug a Hugo Site</a></li>
-<li><a href="#toc_9">Deploy with a Git Subtree Mirroring</a></li>
-<li><a href="#toc_10">Deploy with an Uncluttered Alternate Approach</a>
+<li><a href="#toc_9">Deploy the Site to GitHub Pages</a>
 <ul>
-<li><a href="#toc_11">configuration</a></li>
-<li><a href="#toc_12">setup</a></li>
-<li><a href="#toc_13">run</a></li>
+<li><a href="#toc_10"><em>configuration</em></a></li>
+<li><a href="#toc_11"><em>setup</em></a></li>
+<li><a href="#toc_12"><em>run</em></a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -317,114 +316,43 @@ url = &quot;index.html&quot;
 
 <p>The command <em><strong>hugo server &ndash;watch</strong></em> starts a web server available at &ldquo;<strong><a href="http://localhost:1313/repository-name/">http://localhost:1313/repository-name/</a></strong>&rdquo;, generates website content in the <code>./public</code> directory,  watches source files for changes, recreates the web content as needed, and automatically reload any open pages in browser. After the website development and debugging is completed, the final version of the site should be deployed on GitHub Pages.</p>
 
-<h2 id="toc_9">Deploy with a Git Subtree Mirroring</h2>
+<h2 id="toc_9">Deploy the Site to GitHub Pages</h2>
 
-<p>GitHub Pages will serve up a website for any repository that has a branch called <code>gh-pages</code> with a valid <code>index.html</code> file at that branch&rsquo;s root. To keep an adequate separation between the <code>master</code> and <code>gh-pages</code> branches, and at the same time make a deployment process visual and simple, the developers of <em><strong>Hugo</strong></em> suggested a workflow that is based on use of the <code>git subtree</code> family of commands. It allows to mirror the entire <code>public</code> directory (which contains the generated website) into the root of the <code>gh-pages</code> branch of the repository. As a result, all content modification can be done on the <code>master</code> branch, and after <em><strong>Hugo</strong></em> has generated the site output into the <code>public</code> directory it can be pushed directly to the correct place for GitHub Pages to serve the website. <em><strong>Hugo</strong></em>  <a href="http://gohugo.io/tutorials/github_pages_blog/">&ldquo;<em>Hosting on GitHub Pages</em>&ldquo;</a> tutorial provides a detailed step-by-step description, and the following is a condensed and adapted to the IOOS case version of that workflow:</p>
+<p>GitHub Pages will serve up a website for any project repository that has a branch called <code>gh-pages</code> with a valid <code>index.html</code> file at that branch&rsquo;s root. For the organization/user repository (e.g. <code>ioos.github.io</code>), however, the GitHub Pages serve content of the <code>master</code> branch itself. That may make a deployment of the generated website to GitHub a convoluted process, and unnecessary clutter up the default and deploy repository branches.</p>
 
-<pre><code>    1. Create a new orphand branch (no commit history) named gh-pages
-         git checkout --orphan gh-pages
+<p>A simple and visual deployment workflow based on the <em><strong>Hugo&rsquo;s</strong></em>  <a href="http://gohugo.io/tutorials/github_pages_blog/">&ldquo;<em>Hosting on GitHub Pages</em>&ldquo;</a> tutorial helps untangle the deployment process, and keep an adequate separation between the default and deploy branches. The workflow allows a direct push of the entire content of the generated website to the correct remote repository&rsquo;s branch. It does not stipulate for the commit of generated files to the remote default branch, does not make superfluous commits or deploys when the generated files do not change, and allows keeping a linear history on the deploy branch.</p>
 
-    2. Unstage all files
-        git rm --cached $(git ls-files)
-
-    3. Grab one file from the master branch so we can make a commit
-        git checkout master README.md
-
-    4. Add and commit that file
-        git add README.md
-        git commit -m &quot;INIT: initial commit on gh-pages branch&quot;
-
-    5. Push to remote gh-pages branch 
-        git push origin gh-pages
-
-    6. Return to master branch
-        git checkout master
-
-    7. Remove the public folder to make room for the gh-pages subtree
-        rm -rf public        
-
-    8. Add the gh-pages branch of the repository. It will look like a folder named public
-        git subtree add --prefix public git@github.com:[some-repository-name].git gh-pages --squash
-
-    9. Pull down the file we just committed (totally optional step but helps avoid merge conflicts)
-        git subtree pull --prefix=public
-
-    10. Run Hugo. Generated site will be placed in public directory
-         hugo
-
-    11. Add everything
-         git add -A
-
-    12. Commit and push to master
-         git commit -m &quot;Updating site&quot; 
-         git push origin master
-
-     13. Push the public subtree to the gh-pages branch
-          git subtree push --prefix=public git@github.com:[some-repository-name].git gh-pages
-</code></pre>
-
-<p>After initial deployment, any update of the website would include steps 10 through 13 apart from the creation/update of the content and verification of the generated website. These 4 steps are the same every time content is added or modified. It would be much easier, if that repetitive process is automated with some sort of script. A couple of Linux Bash scripts was developed by Dana Woodman for the <a href="https://github.com/chimera/chimeraarts.org">Chimer Arta &amp; Maker Space</a> website to automate <a href="https://github.com/chimera/chimeraarts.org/blob/master/preview">preview</a> and <a href="https://github.com/chimera/chimeraarts.org/blob/master/publish">publish</a> processes. The latter script was then adopted by Spencer Lyon, and modified into <a href="https://github.com/spencerlyon2/hugo_gh_blog/blob/master/deploy.sh"><code>deploy.sh</code></a>. That script allows to replace the last four items from the above workflow list with a single command <code>bash deploy.sh</code>.</p>
-
-<p><em><strong>NOTES:</strong></em></p>
-
-<blockquote>
-<ol>
-<li>The workflow was developed for Linux. On Windows, some command either have to be modified (e.g. <code>rm -rf</code> to <code>rmdir c:\test /s /q</code>), or Linux native commands can be used with the Linux <a href="http://gnuwin32.sourceforge.net/packages.html">CoreUtils</a> installed.</li>
-<li>To allow running Bash scripts on Windows, some Bash shell software for Windows has to be installed. For example, Bash shell is included into a standard <a href="https://windows.github.com/">GitHub for windows</a> installation package.</li>
-<li>All <code>git</code> commands have to be run from the site <code>&lt;root&gt;</code> directory, i.e. the directory, where the <code>content</code> (or another directory defined as <code>contentdir</code>) and <code>layout</code> sub-directories are located).</li>
-<li>The <code>[some-repository-name]</code> has to be changed to the real repository GitHub address, e.g. <code>ioos/sos-guidelines</code>.</li>
-</ol>
-</blockquote>
-
-<h2 id="toc_10">Deploy with an Uncluttered Alternate Approach</h2>
-
-<p>The above workflow works just great, and it had been used for a while for IOOS Git Pages deployment; however, it has a drawback: it requires the generated content of the <code>publishdir</code> to be committed to the source (<code>master</code>) branch. As a result, the <code>master</code> branch becomes cluttered up with the files generated by <em><strong>Hugo</strong></em> that are only required on the <code>gh-pages</code> branch.</p>
-
-<p>A <a href="http://gohugo.io/tutorials/github-pages-blog#toc_9">different approach</a> has been developed recently, which unlike the <code>git-subtree</code> one does not require to commit the generated files to the <code>master</code> branch. It keeps a linear history on the deploy branch and does not make superfluous commits or deploys when the generated files do not change.</p>
-
-<p>For this approach, the Bash <a href="https://github.com/X1011/git-directory-deploy">script</a> was developed that renders automatic almost all deployment process: the script takes care of everything apart from generating the website with <em><strong>Hugo</strong></em>; it can even create the <code>gh-pages</code> branch of the repository if it does not exist. Although the script requires some initial configuration, the IOOS documentation GitHub Pages are so simple and highly similar that it can be used for each of them without any modification. From now on, the script <code>deploy.sh</code> is included into the IOOS <em><strong>Hugo</strong></em> website skeleton set, and can be downloaded from any IOOS documentation repository.</p>
+<p>The core element of the workflow is the Bash <a href="https://github.com/X1011/git-directory-deploy">script</a> <code>deploy.sh</code> that renders automatic the deployment process apart from generating the website with <em><strong>Hugo</strong></em>: it creates a deploy branch of the remote repository, and commits the website content to it. Although the script requires some initial configuration, the IOOS documentation GitHub Pages are so simple and highly similar that it can be used for each of them without any modification; each repository includes the pre-configured copy of the script.</p>
 
 <p>With this script, the deployment process can be reduced to a few steps:</p>
 
-<h3 id="toc_11">configuration</h3>
+<h3 id="toc_10"><em>configuration</em></h3>
 
 <p>Edit the following variables within the script as needed to fit the project:</p>
 
 <ul>
-<li><code>deploy_directory</code>: root of the tree of files to deploy. For IOOS websites the value is always <strong><code>public</code></strong></li>
-<li><code>deploy_branch</code>: branch to commit files to and push to origin:
-
-<ul>
-<li>for the root <code>ioos.github.io</code> site, the value must be <strong><code>master</code></strong></li>
-<li>for all other projects the value must be <strong><code>gh-pages</code></strong></li>
-</ul></li>
-<li><code>default_username</code>, <code>default_email</code>: identity to use for git commits if none is set already. Usually no need to set up</li>
+<li><code>deploy_directory</code>: root of the tree of files to deploy; must match the value of the <code>publishdir</code> in the <a href="#toc_3">site config file</a>. For IOOS websites the value is always <code>public</code>.</li>
+<li><code>deploy_branch</code>: branch to commit files to and push to origin. For projects the value is <code>gh-pages</code>.</li>
+<li><code>default_username</code>, <code>default_email</code>: identity to use for git commits if none is set already. Usually no need to set up.</li>
 <li><code>repo</code>: repository to deploy to (must be readable and writable). If script runs in the <code>repo</code> root directory, the variable sets up automatically.</li>
 </ul>
 
-<h3 id="toc_12">setup</h3>
+<h3 id="toc_11"><em>setup</em></h3>
 
 <p>Ensure configuration variables are correct in the script and run</p>
 
-<p>&nbsp; &nbsp; <b><code>deploy.sh -s</code></b><br></p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  <em><strong>deploy.sh -s</strong></em></p>
 
 <p>Option <code>-s</code> or <code>--setup</code> makes the script perform one-time setup to prepare the repository for deployments: creates <code>deploy_branch</code> (i.e. <code>gh-pages</code>), initializes it with the contents of <code>deploy_directory</code> (i.e. <code>public</code>), and pushes it to remote repository.</p>
 
-<p>If the <code>deploy_branch</code> exists, running the script with a setup option will fail. Since <code>master</code> branch is always an integral part of any repository, this option should not be used for <code>ioos.github.io</code>.</p>
-
-<h3 id="toc_13">run</h3>
+<h3 id="toc_12"><em>run</em></h3>
 
 <p>Do the following every time you want to deploy:</p>
 
 <ul>
-<li>check out the <strong>default</strong> branch or commit of the source (useful if somebody else might make changes to the source that you are not aware of); the script will use this commit to generate a message when it makes its own commit on the <code>deploy branch</code>
-
-<ul>
-<li>for <code>ioos.github.io</code> site, the default branch is <strong><code>new-website</code></strong></li>
-<li>for all other project websites, the default branch is <strong><code>master</code></strong><br /></li>
-</ul></li>
-<li>generate the files in <code>deploy_directory</code> (i.e. <code>publish</code>). Just run <em><strong>Hugo</strong></em>.</li>
-<li>make sure no uncommitted changes left in git&rsquo;s index, otherwise the script will abort (it is OK to have uncommitted files in the work tree; the script does not touch the work tree).</li>
+<li>check out the <code>master</code> branch or commit of the source (useful if somebody else might make changes to the source that you are not aware of). The script will use this commit to generate a message when it makes its own commit on the deploy branch.</li>
+<li>run <em><strong>Hugo</strong></em> without options to generate the files in <code>deploy_directory</code> (i.e. <code>publish</code>).</li>
+<li>make sure no uncommitted changes left in git&rsquo;s index, otherwise the script will abort. Although it is OK to have uncommitted files in the work tree as the script does not touch the work tree, it is strongly recommended to commit and push all changes to the remote default branch before running the script.</li>
 <li>make sure you are in the project&rsquo;s root directory</li>
 <li>run <code>deploy.sh</code> with or without any of the following options:
 
@@ -438,9 +366,9 @@ url = &quot;index.html&quot;
 
 <blockquote>
 <ol>
-<li>Because of the differences described above, the script for the <code>ioos.github.io</code> is also different; to distinguish the script for the <code>ioos.github.io</code> from the others, it has been renamed to <code>deploy-io.sh</code>.</li>
-<li>To allow running <code>deploy.sh</code> script on Windows, some Bash shell software for Windows has to be installed. For example, Bash shell is included into a standard <a href="https://windows.github.com/">GitHub for windows</a> installation package.</li>
+<li>To allow running Bash scripts on Windows, some Bash shell software for Windows has to be installed. For example, Bash shell is included into a standard <a href="https://windows.github.com/">GitHub for windows</a> installation package.</li>
 <li>The above procedure assumes that the script runs from the site <code>&lt;root&gt;</code> directory, i.e. the directory, where the <code>content</code> (or another directory defined as <code>contentdir</code>) and <code>layout</code> sub-directories are located).</li>
+<li>As GitHub Pages render the organization/user sites in a different way, the <code>deploy_branch</code> value for the <code>ioos.github.io</code> repository must be <code>master</code> instead of <code>gh-pages</code> (for the same reason, a <code>new-website</code> branch has been set up as the default working branch instead of <code>master</code>). To avoid confusion,  the name of the pre-configured script for the <code>ioos.github.io</code> site has changed to <code>deploy-io.sh</code>.<br /></li>
 </ol>
 </blockquote>
 
