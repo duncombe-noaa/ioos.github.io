@@ -29,13 +29,13 @@
 &lt;li&gt;&lt;a href=&#34;https://github.com/ioos/&#34;&gt;GitHub repository&lt;/a&gt; that holds source codes and modules of the IOOS Catalog&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;toc_2&#34;&gt;&lt;a href=&#34;https://github.com/ioos/system-test&#34;&gt;System Integration Test&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;toc_2&#34;&gt;System Integration Test&lt;/h2&gt;
 
-&lt;p&gt;The system integration test development site on github contains IPython notebooks demonstrating how to access data from servers in various scenarios.&lt;/p&gt;
+&lt;p&gt;The &lt;a href=&#34;https://github.com/ioos/system-test&#34;&gt;system integration test development site&lt;/a&gt; on github contains IPython notebooks demonstrating how to access data from servers in various scenarios.&lt;/p&gt;
 
-&lt;h2 id=&#34;toc_3&#34;&gt;&lt;a href=&#34;https://github.com/asascience-open/ncSOS&#34;&gt;ncSOS&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;toc_3&#34;&gt;IOOS ncSOS&lt;/h2&gt;
 
-&lt;p&gt;NcSOS adds an OGC SOS service to datasets in your existing THREDDS server. It complies with the &lt;a href=&#34;https://github.com/ioos/sos-guidelines/tree/master/template/milestone1.0&#34;&gt;IOOS SWE Milestone 1.0 templates&lt;/a&gt; and requires your datasets be in any of the &lt;a href=&#34;http://cfconventions.org/Data/cf-conventions/cf-conventions-1.6/build/cf-conventions.html#discrete-sampling-geometries&#34;&gt;CF 1.6 Discrete Sampling Geometries&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The &lt;a href=&#34;https://github.com/asascience-open/ncSOS&#34;&gt;IOOS ncSOS&lt;/a&gt; adds an OGC SOS service to datasets in your existing THREDDS server. It complies with the &lt;a href=&#34;https://github.com/ioos/sos-guidelines/tree/master/template/milestone1.0&#34;&gt;IOOS SWE Milestone 1.0 templates&lt;/a&gt; and requires your datasets be in any of the &lt;a href=&#34;http://cfconventions.org/Data/cf-conventions/cf-conventions-1.6/build/cf-conventions.html#discrete-sampling-geometries&#34;&gt;CF 1.6 Discrete Sampling Geometries&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2 id=&#34;toc_4&#34;&gt;i52N and related activities like sensor web harvesters&lt;/h2&gt;
 
@@ -47,13 +47,13 @@
 
 &lt;h1 id=&#34;toc_5&#34;&gt;Guidelines and specifications&lt;/h1&gt;
 
-&lt;h2 id=&#34;toc_6&#34;&gt;&lt;a href=&#34;http://www.ioos.noaa.gov/data/contribute_data.html&#34;&gt;Data Provider Guidelines&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;toc_6&#34;&gt;Data Provider Guidelines&lt;/h2&gt;
 
-&lt;p&gt;The &lt;em&gt;&lt;strong&gt;Guidance for Implementation of the Integrated Ocean Observing System (IOOS) Data Management and Communications (DMAC) Subsystem&lt;/strong&gt;&lt;/em&gt; describes the responsibilities of an IOOS Data Provider published on the official IOOS Web site.&lt;/p&gt;
+&lt;p&gt;The &lt;a href=&#34;http://www.ioos.noaa.gov/data/contribute_data.html&#34;&gt;&lt;em&gt;&lt;strong&gt;Guidance for Implementation of the Integrated Ocean Observing System (IOOS) Data Management and Communications (DMAC) Subsystem&lt;/strong&gt;&lt;/em&gt;&lt;/a&gt; describes the responsibilities of an IOOS Data Provider published on the official IOOS Web site.&lt;/p&gt;
 
-&lt;h2 id=&#34;toc_7&#34;&gt;&lt;a href=&#34;http://ioos.github.io/sos-guidelines&#34;&gt;SOS Guidelines&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;toc_7&#34;&gt;SOS Guidelines&lt;/h2&gt;
 
-&lt;p&gt;A website with documentation on using IOOS SOS v1.0 that includes:&lt;/p&gt;
+&lt;p&gt;A &lt;a href=&#34;http://ioos.github.io/sos-guidelines&#34;&gt;website&lt;/a&gt; with documentation on using IOOS SOS v1.0 that includes:&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://ioos.github.io/sos-guidelines/about/&#34;&gt;Overview of SOS activities in IOOS&lt;/a&gt;&lt;br /&gt;&lt;/li&gt;
@@ -69,19 +69,21 @@
 &lt;li&gt;&lt;a href=&#34;https://github.com/ioos/compliance-checker&#34;&gt;IOOS Compliance Checker&lt;/a&gt; tool to check local/remote netCDF datasets against a variety of compliance standards.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;toc_9&#34;&gt;&lt;a href=&#34;http://ioos.github.io/ioos-csv-tsv/&#34;&gt;Data encoding in CSV/TSV&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;toc_9&#34;&gt;Data encoding in CSV/TSV&lt;/h2&gt;
 
-&lt;p&gt;The &lt;em&gt;&lt;strong&gt;IOOS Convention for observation data encoding in CSV/TSV&lt;/strong&gt;&lt;/em&gt; document describes the rukes and constraints for encoding observation data as plain text Comma-Separated Values (CSV) or Tab-Separated Values (TSV).&lt;/p&gt;
+&lt;p&gt;The &lt;a href=&#34;http://ioos.github.io/ioos-csv-tsv/&#34;&gt;&lt;em&gt;&lt;strong&gt;IOOS Convention for observation data encoding in CSV/TSV&lt;/strong&gt;&lt;/em&gt;&lt;/a&gt; document describes the rukes and constraints for encoding observation data as plain text Comma-Separated Values (CSV) or Tab-Separated Values (TSV).&lt;/p&gt;
 
-&lt;h2 id=&#34;toc_10&#34;&gt;&lt;a href=&#34;http://ioos.github.io/conventions-for-observing-asset-identifiers/&#34;&gt;Asset Identifiers&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;toc_10&#34;&gt;Asset Identifiers&lt;/h2&gt;
 
-&lt;p&gt;The &lt;em&gt;&lt;strong&gt;IOOS Conventions for Observing Asset Identifiers&lt;/strong&gt;&lt;/em&gt; document describes the conventions used by the Integrated Ocean Observing System (IOOS) program to assign an identifier to IOOS-related observing assets including measurement stations, platforms and sensors.&lt;/p&gt;
+&lt;p&gt;The &lt;a href=&#34;http://ioos.github.io/conventions-for-observing-asset-identifiers/&#34;&gt;&lt;em&gt;&lt;strong&gt;IOOS Conventions for Observing Asset Identifiers&lt;/strong&gt;&lt;/em&gt;&lt;/a&gt; document describes the conventions used by the Integrated Ocean Observing System (IOOS) program to assign an identifier to IOOS-related observing assets including measurement stations, platforms and sensors.&lt;/p&gt;
 
-&lt;h2 id=&#34;toc_11&#34;&gt;&lt;a href=&#34;https://github.com/ioos/vocabularies&#34;&gt;Vocabularies&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;toc_11&#34;&gt;Vocabularies&lt;/h2&gt;
 
-&lt;p&gt;A collection of the Instructions and Guidelines for use of Controlled Vocabularies in IOOS-compliant data services. The link temporarily leads to the GitHub repository itself rather then to the GitHub Pages.&lt;/p&gt;
+&lt;p&gt;A &lt;a href=&#34;https://github.com/ioos/vocabularies&#34;&gt;collection of the Instructions and Guidelines for use of Controlled Vocabularies&lt;/a&gt; in IOOS-compliant data services (the link temporarily leads to the GitHub repository itself rather then to the GitHub Pages).&lt;/p&gt;
 
-&lt;h2 id=&#34;toc_12&#34;&gt;&lt;a href=&#34;http://ioos.github.io/animal-telemetry/&#34;&gt;Data Services for Animal Telemetry&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;toc_12&#34;&gt;Data Services for Animal Telemetry&lt;/h2&gt;
+
+&lt;p&gt;A &lt;a href=&#34;http://ioos.github.io/animal-telemetry/&#34;&gt;collection&lt;/a&gt; of documents describing animal telemetry implementation:&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;A brief &lt;a href=&#34;http://ioos.github.io/animal-telemetry/about/&#34;&gt;description&lt;/a&gt; of the National Animal Telemetry Network (ATN).&lt;/li&gt;
@@ -91,8 +93,11 @@
 
 &lt;h2 id=&#34;toc_13&#34;&gt;Biological Data Services&lt;/h2&gt;
 
+&lt;p&gt;A &lt;a href=&#34;http://ioos.github.io/biological-data-services/&#34;&gt;collection&lt;/a&gt; of documents describing data services for biological objects:&lt;/p&gt;
+
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://ioos.github.io/biological-data-services/&#34;&gt;Data Enrollment Process&lt;/a&gt; proposed and supported by IOOS DMAC to support sharing and integration of aquatic biological data.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://ioos.github.io/biological-data-services/biological-data-procedure/&#34;&gt;Data Enrollment Process&lt;/a&gt; proposed and supported by IOOS DMAC to support sharing and integration of aquatic biological data.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://ioos.github.io/biological-data-services/biological-observations-project/&#34;&gt;IOOS Biological Observations Project&lt;/a&gt; that addresses the DMAC requirements for biological observations standards and interoperability.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h1 id=&#34;toc_14&#34;&gt;Contributing and changes&lt;/h1&gt;
