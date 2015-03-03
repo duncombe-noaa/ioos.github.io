@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title> </title>
-    <link>http://ioos.github.io/</link>
+    <link>http://ioos.github.io/index.xml/</link>
     <language>en-us</language>
     <author></author>
     <rights>(C) 2014</rights>
@@ -18,26 +18,26 @@
           <guid>http://ioos.github.io/index.html</guid>
           <description>
 
-&lt;h1 id=&#34;projects:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;Projects&lt;/h1&gt;
+&lt;h1 id=&#34;toc_0&#34;&gt;Projects&lt;/h1&gt;
 
 &lt;p&gt;&lt;a name=&#34;System Integration Test&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;ioos-catalog-of-services-and-datasets:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;IOOS Catalog of Services and Datasets&lt;/h2&gt;
+&lt;h2 id=&#34;toc_1&#34;&gt;IOOS Catalog of Services and Datasets&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://catalog.ioos.us&#34;&gt;IOOS Web Catalog&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/ioos/&#34;&gt;GitHub repository&lt;/a&gt; that holds source codes and modules of the IOOS Catalog&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;system-integration-test:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;System Integration Test&lt;/h2&gt;
+&lt;h2 id=&#34;toc_2&#34;&gt;System Integration Test&lt;/h2&gt;
 
 &lt;p&gt;The &lt;a href=&#34;https://github.com/ioos/system-test&#34;&gt;system integration test development site&lt;/a&gt; on github contains IPython notebooks demonstrating how to access data from servers in various scenarios.&lt;/p&gt;
 
-&lt;h2 id=&#34;ioos-ncsos:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;IOOS ncSOS&lt;/h2&gt;
+&lt;h2 id=&#34;toc_3&#34;&gt;IOOS ncSOS&lt;/h2&gt;
 
 &lt;p&gt;The &lt;a href=&#34;https://github.com/asascience-open/ncSOS&#34;&gt;IOOS ncSOS&lt;/a&gt; adds an OGC SOS service to datasets in your existing THREDDS server. It complies with the &lt;a href=&#34;https://github.com/ioos/sos-guidelines/tree/master/template/milestone1.0&#34;&gt;IOOS SWE Milestone 1.0 templates&lt;/a&gt; and requires your datasets be in any of the &lt;a href=&#34;http://cfconventions.org/Data/cf-conventions/cf-conventions-1.6/build/cf-conventions.html#discrete-sampling-geometries&#34;&gt;CF 1.6 Discrete Sampling Geometries&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h2 id=&#34;i52n-and-related-activities-like-sensor-web-harvesters:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;i52N and related activities like sensor web harvesters&lt;/h2&gt;
+&lt;h2 id=&#34;toc_4&#34;&gt;i52N and related activities like sensor web harvesters&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://ioos.github.io/i52n-sos/&#34;&gt;i52N-SOS&lt;/a&gt;, an IOOS customized build of the &lt;a href=&#34;http://52north.org/sos&#34;&gt;52°North Sensor Observation Service (SOS)&lt;/a&gt; that extends the stock upstream &lt;a href=&#34;https://github.com/52North/SOS&#34;&gt;52°North SOS&lt;/a&gt; with IOOS specific encoding formats, test data, and more.&lt;/li&gt;
@@ -46,13 +46,13 @@
 
 &lt;!-- * [IOOS SOS Validator](https://github.com/ioos/ioos-sos-validator) for simple schema validation of SOS responses and templates --&gt; 
 
-&lt;h1 id=&#34;guidelines-and-specifications:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;Guidelines and specifications&lt;/h1&gt;
+&lt;h1 id=&#34;toc_5&#34;&gt;Guidelines and specifications&lt;/h1&gt;
 
-&lt;h2 id=&#34;data-provider-guidelines:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;Data Provider Guidelines&lt;/h2&gt;
+&lt;h2 id=&#34;toc_6&#34;&gt;Data Provider Guidelines&lt;/h2&gt;
 
 &lt;p&gt;The &lt;a href=&#34;http://www.ioos.noaa.gov/data/contribute_data.html&#34;&gt;&lt;em&gt;&lt;strong&gt;Guidance for Implementation of the Integrated Ocean Observing System (IOOS) Data Management and Communications (DMAC) Subsystem&lt;/strong&gt;&lt;/em&gt;&lt;/a&gt; describes the responsibilities of an IOOS Data Provider published on the official IOOS Web site.&lt;/p&gt;
 
-&lt;h2 id=&#34;sos-guidelines:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;SOS Guidelines&lt;/h2&gt;
+&lt;h2 id=&#34;toc_7&#34;&gt;SOS Guidelines&lt;/h2&gt;
 
 &lt;p&gt;A &lt;a href=&#34;http://ioos.github.io/sos-guidelines&#34;&gt;website&lt;/a&gt; with documentation on using IOOS SOS v1.0 that includes:&lt;/p&gt;
 
@@ -63,26 +63,26 @@
 &lt;li&gt;&lt;a href=&#34;http://ioos.github.io/sos-guidelines/doc/testing/sos_test_list_github_notoc_summary/&#34;&gt;List of IOOS-specific compliance tests&lt;/a&gt;&lt;br /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;netcdf-and-or-opendap-guidelines:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;netCDF and/or opendap guidelines&lt;/h2&gt;
+&lt;h2 id=&#34;toc_8&#34;&gt;netCDF and/or opendap guidelines&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;See [&lt;a href=&#34;https://github.com/dpsnowden/netcdf-guidelines&#34;&gt;https://github.com/dpsnowden/netcdf-guidelines&lt;/a&gt;] for some initial ideas on what this needs to contain.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/ioos/compliance-checker&#34;&gt;IOOS Compliance Checker&lt;/a&gt; tool to check local/remote netCDF datasets against a variety of compliance standards.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;data-encoding-in-csv-tsv:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;Data encoding in CSV/TSV&lt;/h2&gt;
+&lt;h2 id=&#34;toc_9&#34;&gt;Data encoding in CSV/TSV&lt;/h2&gt;
 
 &lt;p&gt;The &lt;a href=&#34;http://ioos.github.io/ioos-csv-tsv/&#34;&gt;&lt;em&gt;&lt;strong&gt;IOOS Convention for observation data encoding in CSV/TSV&lt;/strong&gt;&lt;/em&gt;&lt;/a&gt; document describes the rukes and constraints for encoding observation data as plain text Comma-Separated Values (CSV) or Tab-Separated Values (TSV).&lt;/p&gt;
 
-&lt;h2 id=&#34;asset-identifiers:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;Asset Identifiers&lt;/h2&gt;
+&lt;h2 id=&#34;toc_10&#34;&gt;Asset Identifiers&lt;/h2&gt;
 
 &lt;p&gt;The &lt;a href=&#34;http://ioos.github.io/conventions-for-observing-asset-identifiers/&#34;&gt;&lt;em&gt;&lt;strong&gt;IOOS Conventions for Observing Asset Identifiers&lt;/strong&gt;&lt;/em&gt;&lt;/a&gt; document describes the conventions used by the Integrated Ocean Observing System (IOOS) program to assign an identifier to IOOS-related observing assets including measurement stations, platforms and sensors.&lt;/p&gt;
 
-&lt;h2 id=&#34;vocabularies:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;Vocabularies&lt;/h2&gt;
+&lt;h2 id=&#34;toc_11&#34;&gt;Vocabularies&lt;/h2&gt;
 
 &lt;p&gt;A &lt;a href=&#34;https://github.com/ioos/vocabularies&#34;&gt;collection of the Instructions and Guidelines for use of Controlled Vocabularies&lt;/a&gt; in IOOS-compliant data services (the link temporarily leads to the GitHub repository itself rather then to the GitHub Pages).&lt;/p&gt;
 
-&lt;h2 id=&#34;data-services-for-animal-telemetry:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;Data Services for Animal Telemetry&lt;/h2&gt;
+&lt;h2 id=&#34;toc_12&#34;&gt;Data Services for Animal Telemetry&lt;/h2&gt;
 
 &lt;p&gt;A &lt;a href=&#34;http://ioos.github.io/animal-telemetry/&#34;&gt;collection&lt;/a&gt; of documents describing animal telemetry implementation:&lt;/p&gt;
 
@@ -92,7 +92,7 @@
 &lt;li&gt;&lt;a href=&#34;http://abirger.github.io/animal-telemetry/passive-acoustic/&#34;&gt;A Metadata Convention for Passive Acoustic Recordings&lt;/a&gt; version 1.0.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;biological-data-services:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;Biological Data Services&lt;/h2&gt;
+&lt;h2 id=&#34;toc_13&#34;&gt;Biological Data Services&lt;/h2&gt;
 
 &lt;p&gt;A &lt;a href=&#34;http://ioos.github.io/biological-data-services/&#34;&gt;collection&lt;/a&gt; of documents describing data services for biological objects:&lt;/p&gt;
 
@@ -101,7 +101,7 @@
 &lt;li&gt;&lt;a href=&#34;http://ioos.github.io/biological-data-services/biological-observations-project/&#34;&gt;IOOS Biological Observations Project&lt;/a&gt; that addresses the DMAC requirements for biological observations standards and interoperability.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h1 id=&#34;contributing-and-changes:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;Contributing and changes&lt;/h1&gt;
+&lt;h1 id=&#34;toc_14&#34;&gt;Contributing and changes&lt;/h1&gt;
 
 &lt;p&gt;To make changes to this website and add information, see the &lt;a href=&#34;website_deployment_workflow_updated&#34;&gt;Website Deployment Workflow&lt;/a&gt; page.&lt;/p&gt;
 </description>
@@ -119,7 +119,7 @@
           <guid>http://ioos.github.io/website_deployment_workflow_updated/</guid>
           <description>
 
-&lt;h1 id=&#34;introduction:a4761be0533377a1c16ca0c552c0d383&#34;&gt;Introduction&lt;/h1&gt;
+&lt;h1 id=&#34;toc_0&#34;&gt;Introduction&lt;/h1&gt;
 
 &lt;p&gt;This document describes the deployment of the IOOS documentation web pages generated with a &lt;a href=&#34;http://gohugo.io/&#34;&gt;&lt;em&gt;&lt;strong&gt;Hugo&lt;/strong&gt;&lt;/em&gt;&lt;/a&gt; static page generator. The &lt;em&gt;&lt;strong&gt;Hugo&lt;/strong&gt;&lt;/em&gt; generator was picked out after some research and experiments mostly for the following reasons:&lt;/p&gt;
 
@@ -133,7 +133,7 @@
 
 &lt;p&gt;The following workflow description is mostly based on the &lt;a href=&#34;http://gohugo.io/tutorials/github_pages_blog/&#34;&gt;Hosting on GitHub Pages&lt;/a&gt; tutorial, which has been updated to reflect IOOS specifics.&lt;/p&gt;
 
-&lt;h1 id=&#34;ioos-documentation-repositories:a4761be0533377a1c16ca0c552c0d383&#34;&gt;IOOS Documentation Repositories&lt;/h1&gt;
+&lt;h1 id=&#34;toc_1&#34;&gt;IOOS Documentation Repositories&lt;/h1&gt;
 
 &lt;p&gt;The IOOS DMAC Documentation Strategy requires that all DMAC-related documentation is converted into Markdown, and stored in a specially structured GitHub repository. In general, the repository must contain a &amp;ldquo;doc&amp;rdquo; directory that holds all documents in Markdown, and a &amp;ldquo;README.md&amp;rdquo; file that briefly describes the repository:&lt;/p&gt;
 
@@ -169,7 +169,7 @@
     └── README.md
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h1 id=&#34;structure-of-ioos-documentation-website:a4761be0533377a1c16ca0c552c0d383&#34;&gt;Structure of IOOS Documentation Website&lt;/h1&gt;
+&lt;h1 id=&#34;toc_2&#34;&gt;Structure of IOOS Documentation Website&lt;/h1&gt;
 
 &lt;p&gt;By default, &lt;em&gt;&lt;strong&gt;Hugo&lt;/strong&gt;&lt;/em&gt; expects the content of the site to be structured in some specific way, and uses that same structure to render the website.&lt;/p&gt;
 
@@ -202,7 +202,7 @@
 &lt;/ol&gt;
 &lt;/blockquote&gt;
 
-&lt;h2 id=&#34;site-config-file:a4761be0533377a1c16ca0c552c0d383&#34;&gt;Site Config File&lt;/h2&gt;
+&lt;h2 id=&#34;toc_3&#34;&gt;Site Config File&lt;/h2&gt;
 
 &lt;p&gt;The config file defines the framework of the website generated by &lt;em&gt;&lt;strong&gt;Hugo&lt;/strong&gt;&lt;/em&gt;. It defines site-wide settings (like the websites &lt;code&gt;baseurl&lt;/code&gt;), and allows to modify to some extent the default website structure. For example, the &lt;code&gt;sos-guidelines&lt;/code&gt; website has file &lt;code&gt;config.toml&lt;/code&gt; with the following contents&lt;/p&gt;
 
@@ -222,7 +222,7 @@ languageCode = &amp;quot;en-us&amp;quot;
 
 &lt;p&gt;For detailed explanation of how to build the &lt;em&gt;&lt;strong&gt;Hugo&lt;/strong&gt;&lt;/em&gt; config file, and the exact meaning of the parameters and operators refer to the &lt;a href=&#34;http://gohugo.io/overview/configuration&#34;&gt;Configuration&lt;/a&gt; section of &lt;em&gt;&lt;strong&gt;Hugo&lt;/strong&gt;&lt;/em&gt; documentation.&lt;/p&gt;
 
-&lt;h2 id=&#34;html-templates:a4761be0533377a1c16ca0c552c0d383&#34;&gt;HTML Templates&lt;/h2&gt;
+&lt;h2 id=&#34;toc_4&#34;&gt;HTML Templates&lt;/h2&gt;
 
 &lt;p&gt;For IOOS DMAC documentation web pages, the &lt;a href=&#34;https://github.com/tummychow/lanyon-hugo&#34;&gt;&lt;em&gt;&lt;strong&gt;Lanyon&lt;/strong&gt;&lt;/em&gt;&lt;/a&gt; theme has been chosen because it has a sliding sidebar controlled by an unobtrusive clickable button, which allows using almost all available screen space for large documents like XML listings and such. The default theme was slightly modified in order to increase its expressiveness, add IOOS logo, and further expand the document viewing area.&lt;/p&gt;
 
@@ -239,7 +239,7 @@ languageCode = &amp;quot;en-us&amp;quot;
 
 &lt;p&gt;For a detailed description of the &lt;em&gt;&lt;strong&gt;Hugo&lt;/strong&gt;&lt;/em&gt; themes, templates and layouts refer to the &lt;a href=&#34;http://gohugo.io/&#34;&gt;&lt;em&gt;&lt;strong&gt;Hugo&lt;/strong&gt;&lt;/em&gt; documentation&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h2 id=&#34;hugo-metadata-in-content-files:a4761be0533377a1c16ca0c552c0d383&#34;&gt;Hugo Metadata in Content Files&lt;/h2&gt;
+&lt;h2 id=&#34;toc_5&#34;&gt;Hugo Metadata in Content Files&lt;/h2&gt;
 
 &lt;p&gt;To ensure a proper rendering of the website content, each document in the &lt;code&gt;contentdir&lt;/code&gt; should include at the top a metadata section. That metadata section is called a &lt;a href=&#34;http://gohugo.io/content/front-matter/&#34;&gt;front matter&lt;/a&gt;, and should be written in YAML, TOML or JSON format. The front matter tells &lt;em&gt;&lt;strong&gt;Hugo&lt;/strong&gt;&lt;/em&gt; some details of how to render the content file. For example, the following front matter is included in the SOS WSDD file:&lt;/p&gt;
 
@@ -269,7 +269,7 @@ url = &amp;quot;index.html&amp;quot;
 
 &lt;p&gt;For a detailed description of the metadata section supported formats and variables refer to the  &lt;em&gt;&lt;strong&gt;Hugo&lt;/strong&gt;&lt;/em&gt; &lt;a href=&#34;http://gohugo.io/content/front-matter/&#34;&gt;Front Matter&lt;/a&gt; documentation.&lt;/p&gt;
 
-&lt;h3 id=&#34;content-and-non-content-menu-in-sidebar:a4761be0533377a1c16ca0c552c0d383&#34;&gt;Content and Non-content Menu in Sidebar&lt;/h3&gt;
+&lt;h3 id=&#34;toc_6&#34;&gt;Content and Non-content Menu in Sidebar&lt;/h3&gt;
 
 &lt;p&gt;By default, &lt;em&gt;&lt;strong&gt;Hugo&lt;/strong&gt;&lt;/em&gt; will put the document title into sidebar document menu. That behavior can be changed with the &lt;code&gt;sidebar = false&lt;/code&gt; line in the front matter.&lt;/p&gt;
 
@@ -290,11 +290,11 @@ url = &amp;quot;index.html&amp;quot;
 
 &lt;p&gt;For more detailed information on menus definition, refer to a &lt;a href=&#34;http://gohugo.io/extras/menus/&#34;&gt;corresponding part&lt;/a&gt; of &lt;em&gt;&lt;strong&gt;Hugo&lt;/strong&gt;&lt;/em&gt; documentation.&lt;/p&gt;
 
-&lt;h1 id=&#34;workflow-for-ioos-documentation-website-deployment-on-github:a4761be0533377a1c16ca0c552c0d383&#34;&gt;Workflow for IOOS Documentation Website deployment on GitHub&lt;/h1&gt;
+&lt;h1 id=&#34;toc_7&#34;&gt;Workflow for IOOS Documentation Website deployment on GitHub&lt;/h1&gt;
 
 &lt;p&gt;The  &lt;em&gt;&lt;strong&gt;Hugo&lt;/strong&gt;&lt;/em&gt; IOOS DMAC Documentation website can be created from any GitHub documentation repository by following a few simple procedures below.&lt;/p&gt;
 
-&lt;h2 id=&#34;create-and-debug-a-hugo-site:a4761be0533377a1c16ca0c552c0d383&#34;&gt;Create and Debug a Hugo Site&lt;/h2&gt;
+&lt;h2 id=&#34;toc_8&#34;&gt;Create and Debug a Hugo Site&lt;/h2&gt;
 
 &lt;ol&gt;
 &lt;li&gt;Clone the repository from &lt;code&gt;github.com/IOOS&lt;/code&gt;, or create the repository in the local directory.&lt;/li&gt;
@@ -310,7 +310,7 @@ url = &amp;quot;index.html&amp;quot;
 
 &lt;p&gt;The command &lt;em&gt;&lt;strong&gt;hugo server &amp;ndash;watch&lt;/strong&gt;&lt;/em&gt; starts a web server available at &amp;ldquo;&lt;strong&gt;&lt;a href=&#34;http://localhost:1313/repository-name/&#34;&gt;http://localhost:1313/repository-name/&lt;/a&gt;&lt;/strong&gt;&amp;rdquo;, generates website content in the &lt;code&gt;./public&lt;/code&gt; directory,  watches source files for changes, recreates the web content as needed, and automatically reload any open pages in browser. After the website development and debugging is completed, the final version of the site should be deployed on GitHub Pages.&lt;/p&gt;
 
-&lt;h2 id=&#34;deploy-the-site-to-github-pages:a4761be0533377a1c16ca0c552c0d383&#34;&gt;Deploy the Site to GitHub Pages&lt;/h2&gt;
+&lt;h2 id=&#34;toc_9&#34;&gt;Deploy the Site to GitHub Pages&lt;/h2&gt;
 
 &lt;p&gt;GitHub Pages will serve up a website for any project repository that has a branch called &lt;code&gt;gh-pages&lt;/code&gt; with a valid &lt;code&gt;index.html&lt;/code&gt; file at that branch&amp;rsquo;s root. For the organization/user repository (e.g. &lt;code&gt;ioos.github.io&lt;/code&gt;), however, the GitHub Pages serve content of the &lt;code&gt;master&lt;/code&gt; branch itself. That may make a deployment of the generated website to GitHub a convoluted process, and unnecessary clutter up the default and deploy repository branches.&lt;/p&gt;
 
@@ -320,7 +320,7 @@ url = &amp;quot;index.html&amp;quot;
 
 &lt;p&gt;With this script, the deployment process can be reduced to a few steps:&lt;/p&gt;
 
-&lt;h3 id=&#34;configuration:a4761be0533377a1c16ca0c552c0d383&#34;&gt;&lt;em&gt;configuration&lt;/em&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;toc_10&#34;&gt;&lt;em&gt;configuration&lt;/em&gt;&lt;/h3&gt;
 
 &lt;p&gt;Edit the following variables within the script as needed to fit the project:&lt;/p&gt;
 
@@ -331,7 +331,7 @@ url = &amp;quot;index.html&amp;quot;
 &lt;li&gt;&lt;code&gt;repo&lt;/code&gt;: repository to deploy to (must be readable and writable). If script runs in the &lt;code&gt;repo&lt;/code&gt; root directory, the variable sets up automatically.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;setup:a4761be0533377a1c16ca0c552c0d383&#34;&gt;&lt;em&gt;setup&lt;/em&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;toc_11&#34;&gt;&lt;em&gt;setup&lt;/em&gt;&lt;/h3&gt;
 
 &lt;p&gt;Ensure configuration variables are correct in the script and run&lt;/p&gt;
 
@@ -339,7 +339,7 @@ url = &amp;quot;index.html&amp;quot;
 
 &lt;p&gt;Option &lt;code&gt;-s&lt;/code&gt; or &lt;code&gt;--setup&lt;/code&gt; makes the script perform one-time setup to prepare the repository for deployments: creates &lt;code&gt;deploy_branch&lt;/code&gt; (i.e. &lt;code&gt;gh-pages&lt;/code&gt;), initializes it with the contents of &lt;code&gt;deploy_directory&lt;/code&gt; (i.e. &lt;code&gt;public&lt;/code&gt;), and pushes it to remote repository.&lt;/p&gt;
 
-&lt;h3 id=&#34;run:a4761be0533377a1c16ca0c552c0d383&#34;&gt;&lt;em&gt;run&lt;/em&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;toc_12&#34;&gt;&lt;em&gt;run&lt;/em&gt;&lt;/h3&gt;
 
 &lt;p&gt;Do the following every time you want to deploy:&lt;/p&gt;
 
