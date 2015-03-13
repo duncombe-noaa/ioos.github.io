@@ -66,13 +66,16 @@
 &lt;li&gt;&lt;a href=&#34;http://ioos.github.io/sos-guidelines/template/SOS-GetCapabilities/&#34;&gt;GetCapabilities&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://ioos.github.io/sos-guidelines/template/SML-DescribeSensor-Network/&#34;&gt;DescribeSensor for a network of platforms&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://ioos.github.io/sos-guidelines/template/SML-DescribeSensor-Station/&#34;&gt;DescribeSensor for a single platform&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;GetObservation:&lt;/li&gt;
+&lt;li&gt;GetObservation:
+
+&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://ioos.github.io/sos-guidelines/template/OM-GetObservation/&#34;&gt;Generic OM part&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://ioos.github.io/sos-guidelines/template/SWE-MultiStation-TimeSeries/&#34;&gt;TimeSeries SWE Data Record’s static and dynamic fields for multiple stations with multiple sensors&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://ioos.github.io/sos-guidelines/template/SWE-MultiStation-TimeSeries_QC/&#34;&gt;TimeSeries SWE Data Record’s static and dynamic fields for multiple stations with multiple sensors and QC elements&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://ioos.github.io/sos-guidelines/template/SWE-SingleStation-SingleProperty-TimeSeries/&#34;&gt;TimeSeries SWE Data Record’s static and dynamic fields for a single station with a single sensor&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://ioos.github.io/sos-guidelines/template/SWE-SingleStation-TimeSeriesProfile/&#34;&gt;TimeSeriesProfile SWE Data Record’s static and dynamic fields for a station with profiling sensors&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://ioos.github.io/sos-guidelines/template/SWE-SingleStation-TimeSeriesProfile_QC/&#34;&gt;TimeSeriesProfile SWE Data Record’s static and dynamic fields for a station with profiling sensors and QC elements&lt;/a&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
