@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile"> 
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <title>
+    
+      Hosting on IOOS GitHub Pages Workflow &middot; IOOS GITHUB PAGES
+    
+  </title>
+
+  
+  <link rel="stylesheet" href="http://ioos.github.io/css/poole.css">
+  <link rel="stylesheet" href="http://ioos.github.io/css/syntax.css">
+  <link rel="stylesheet" href="http://ioos.github.io/css/lanyon.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700|PT+Sans:400">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://ioos.github.io/assets/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="http://ioos.github.io/assets/favicon.ico">
+
+  
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="http://ioos.github.io/atom.xml">
+</head>
+
+
+  <body>
+
+    
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p align="center">&middot; <a href="http://ioos.github.io/" target="_blank">IOOS GitHub Pages</a> &middot; <br>
+	a collection of IOOS documentation and software</p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item " href="http://ioos.github.io/">Home</a>
+
+
+  <div class="sidebar-item">
+    <p>Documents</p>
+  </div>
+
+<p style="text-align:right"> 
+    
+    
+      
+        <a class="sidebar-nav-item-list " href="http://ioos.github.io/index.html">ABOUT: IOOS GitHub Pages</a>
+      
+    
+      
+    
+      
+        <a class="sidebar-nav-item-list  active " href="http://ioos.github.io/website_deployment_workflow_updated/">Hosting on IOOS GitHub Pages Workflow</a>
+      
+    
+</p>
+<p style="text-align:right">
+      
+        <a class="sidebar-nav-item-list" href=""> </a>
+      
+</p>
+
+    <a class="sidebar-nav-item" href="https://github.com/ioos/ioos.github.io/archive/new-website.zip">Download</a>
+    <a class="sidebar-nav-item" href="https://github.com/ioos/ioos.github.io">GitHub repository</a>
+    <span class="sidebar-nav-item">Currently on new-website</span>
+  </nav>
+
+  <div class="sidebar-item">
+    <p>&copy; 2014 U.S. IOOS. Rights reserved</p>
+  </div>
+</div>
+
+
+    
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h2 class="masthead-title">
+		  <a href="http://ioos.github.io/" title="Home"> IOOS GITHUB PAGES &middot; 
+		  <small>Entry point for IOOS resources on GitHub</small>
+		  <img src="http://ioos.github.io/images/ioos_blue2.png" alt="Smiley face" align="right" /></a>
+		  </h2>
+        </div>
+      </div>
+
+      <div class="container content">
+
+
+<div class="post">
+  <h1 class="post-title">Hosting on IOOS GitHub Pages Workflow</h1>
+    <div id="toc" class="well col-md-4 col-sm-6">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#introduction:a4761be0533377a1c16ca0c552c0d383">Introduction</a></li>
+<li><a href="#ioos-documentation-repositories:a4761be0533377a1c16ca0c552c0d383">IOOS Documentation Repositories</a></li>
+<li><a href="#structure-of-ioos-documentation-website:a4761be0533377a1c16ca0c552c0d383">Structure of IOOS Documentation Website</a>
+<ul>
+<li><a href="#site-config-file:a4761be0533377a1c16ca0c552c0d383">Site Config File</a></li>
+<li><a href="#html-templates:a4761be0533377a1c16ca0c552c0d383">HTML Templates</a></li>
+<li><a href="#hugo-metadata-in-content-files:a4761be0533377a1c16ca0c552c0d383">Hugo Metadata in Content Files</a>
+<ul>
+<li><a href="#content-and-non-content-menu-in-sidebar:a4761be0533377a1c16ca0c552c0d383">Content and Non-content Menu in Sidebar</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#workflow-for-ioos-documentation-website-deployment-on-github:a4761be0533377a1c16ca0c552c0d383">Workflow for IOOS Documentation Website deployment on GitHub</a>
+<ul>
+<li><a href="#create-and-debug-a-hugo-site:a4761be0533377a1c16ca0c552c0d383">Create and Debug a Hugo Site</a></li>
+<li><a href="#deploy-the-site-to-github-pages:a4761be0533377a1c16ca0c552c0d383">Deploy the Site to GitHub Pages</a>
+<ul>
+<li><a href="#configuration:a4761be0533377a1c16ca0c552c0d383"><em>configuration</em></a></li>
+<li><a href="#setup:a4761be0533377a1c16ca0c552c0d383"><em>setup</em></a></li>
+<li><a href="#run:a4761be0533377a1c16ca0c552c0d383"><em>run</em></a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+  
+
+<h1 id="introduction:a4761be0533377a1c16ca0c552c0d383">Introduction</h1>
+
+<p>This document describes the deployment of the IOOS documentation web pages generated with a <a href="http://gohugo.io/"><em><strong>Hugo</strong></em></a> static page generator. The <em><strong>Hugo</strong></em> generator was picked out after some research and experiments mostly for the following reasons:</p>
+
+<ul>
+<li>portability, i.e. it is a self-contained application that does not require installation;</li>
+<li>no prerequisite installation of a tool/language like Ruby, Python, or Java;</li>
+<li>direct processing of the Markdown content;<br /></li>
+<li>very satisfactory results with a bare minimal modification of the default themes and templates;</li>
+<li>relatively simple workflow of the generated web site deployment onto GitHub Pages.</li>
+</ul>
+
+<p>The following workflow description is mostly based on the <a href="http://gohugo.io/tutorials/github_pages_blog/">Hosting on GitHub Pages</a> tutorial, which has been updated to reflect IOOS specifics.</p>
+
+<h1 id="ioos-documentation-repositories:a4761be0533377a1c16ca0c552c0d383">IOOS Documentation Repositories</h1>
+
+<p>The IOOS DMAC Documentation Strategy requires that all DMAC-related documentation is converted into Markdown, and stored in a specially structured GitHub repository. In general, the repository must contain a &ldquo;doc&rdquo; directory that holds all documents in Markdown, and a &ldquo;README.md&rdquo; file that briefly describes the repository:</p>
+
+<pre><code>   ioos/[some repository]/
+    ├── doc/
+    |    ├── DOC1.md
+    |    ├── DOC2.md
+    |    |    └── images/
+    |    └── DOC3.md  
+    └── README.md
+</code></pre>
+
+<p>In some cases the repository may have more complex structure, and contain not only Markdown files; for example, the <a href="https://github.com/ioos/sos-guidelines">sos-guidelines</a> repository includes an additional SOS Templates section with a set of XML files:</p>
+
+<pre><code>   ioos/sos-guidelines/
+    ├── doc/
+    |    ├── testing/
+    |    |    └── sos_test_list_github_notoc_summary.md
+    |    └── wsdd/ 
+    |         ├── sos_wsdd_github_notoc.md    
+    |         └── sos_wsdd_github_toc.md
+    ├── template/
+    |    └── milestone 1.0/
+    |          ├── OM-GetObservation.xml
+    |          ├── SML-DescribeSensor-Network.xml
+    |          ├── SML-DescribeSensor-Station.xml
+    |          ├── SOS-GetCapabilities.xml
+    |          ├── SWE-MultiStation-TimeSeries.xml
+    |          ├── SWE-MultiStation-TimeSeries_QC.xml
+    |          ├── SWE-SingleStation-SingleProperty-TimeSeries.xml
+    |          ├── SWE-SingleStation-TimeSeriesProfile.xml
+    |          └── SWE-SingleStation-TimeSeriesProfile_QC.xml
+    └── README.md
+</code></pre>
+
+<h1 id="structure-of-ioos-documentation-website:a4761be0533377a1c16ca0c552c0d383">Structure of IOOS Documentation Website</h1>
+
+<p>By default, <em><strong>Hugo</strong></em> expects the content of the site to be structured in some specific way, and uses that same structure to render the website.</p>
+
+<p>The top level of a source directory will typically have the following elements:</p>
+
+<pre><code>   ioos/[some-repository-name]/
+    ├── archtypes/
+    ├── content/
+    ├── layouts/
+    ├── static/
+    └── config file
+</code></pre>
+
+<p>The <code>content</code> directory by default holds the documents that are the actual content of the website (i.e. are rendered by <em><strong>Hugo</strong></em>), and sub-directories of the <code>content</code> directory form the sections. The real content holding directory may be changed with a <em>contentdir</em> value in the <em><strong>Hugo</strong></em> <a href="http://gohugo.io/overview/configuration/">config file</a>.</p>
+
+<p>The <code>static</code> directory is used to hold the common website elements, such as Style Sheets, Java Scripts, and images, etc., which will be copied directly into the final site when rendered. Although <em><strong>Hugo</strong></em> does not require any specific structure for <code>static</code> directory, it is usually organized in the following way:</p>
+
+<pre><code>   static/
+    ├── css/
+    ├── js/
+    └── images/
+</code></pre>
+
+<p><em><strong>NOTES</strong></em>:</p>
+
+<blockquote>
+<ol>
+<li>Currently, <em><strong>Hugo</strong></em> can render only Markdown files, so all documents in the <code>contentdir</code> (e.g. &lsquo;content&rsquo;) must be in Markdown format for proper rendering. As the original documents may be in various formats, it is necessary to keep the <code>contentdir</code> separate from the original document directory (e.g. &lsquo;doc&rsquo;).<br /></li>
+<li>All images and diagrams from the original documents that should appear on the rendered web pages must be copied into the <em><strong>static/images</strong></em> directory for the proper website rendering.  The links to the images in the Markdown version of the document have to be modified accordingly.<br /></li>
+</ol>
+</blockquote>
+
+<h2 id="site-config-file:a4761be0533377a1c16ca0c552c0d383">Site Config File</h2>
+
+<p>The config file defines the framework of the website generated by <em><strong>Hugo</strong></em>. It defines site-wide settings (like the websites <code>baseurl</code>), and allows to modify to some extent the default website structure. For example, the <code>sos-guidelines</code> website has file <code>config.toml</code> with the following contents</p>
+
+<pre><code>baseurl = &quot;http://abirger.github.io/sos-guidelines&quot;
+CanonifyUrls = true
+contentdir = &quot;content&quot;
+layoutdir = &quot;layouts&quot;
+publishdir = &quot;public&quot;
+languageCode = &quot;en-us&quot;
+[params]
+    Title = &quot;IOOS SOS Guidelines&quot;
+    Tagline = &quot;Docs, codes, scripts, templates&quot;
+[params.Github]
+    Head = &quot;master&quot;
+    Url = &quot;https://github.com/ioos/sos-guidelines&quot;
+</code></pre>
+
+<p>For detailed explanation of how to build the <em><strong>Hugo</strong></em> config file, and the exact meaning of the parameters and operators refer to the <a href="http://gohugo.io/overview/configuration">Configuration</a> section of <em><strong>Hugo</strong></em> documentation.</p>
+
+<h2 id="html-templates:a4761be0533377a1c16ca0c552c0d383">HTML Templates</h2>
+
+<p>For IOOS DMAC documentation web pages, the <a href="https://github.com/tummychow/lanyon-hugo"><em><strong>Lanyon</strong></em></a> theme has been chosen because it has a sliding sidebar controlled by an unobtrusive clickable button, which allows using almost all available screen space for large documents like XML listings and such. The default theme was slightly modified in order to increase its expressiveness, add IOOS logo, and further expand the document viewing area.</p>
+
+<p><em><strong>NOTES:</strong></em></p>
+
+<blockquote>
+<ol>
+<li>The <em><strong>Hugo</strong></em> requires that the home page should be defined as the <code>index.html</code> file in the <code>layouts</code> directory.</li>
+<li>To show the documents&rsquo; summary on the website home page, each document in <code>contentdir</code> directory has to start from the summary text separated from the rest of the document with the line that contains the &lt;!&ndash;more&ndash;&gt; comment.</li>
+<li>If the home page should contain just a single document (e.g. about the site), that document must have a <code>url = &quot;index.html&quot;</code> line in the <a href="#toc_5">front matter</a>.</li>
+<li>The IOOS logo is in the &lsquo;ioos_blue2.png&rsquo; file located in &lsquo;static/images/&rsquo; directory.</li>
+</ol>
+</blockquote>
+
+<p>For a detailed description of the <em><strong>Hugo</strong></em> themes, templates and layouts refer to the <a href="http://gohugo.io/"><em><strong>Hugo</strong></em> documentation</a>.</p>
+
+<h2 id="hugo-metadata-in-content-files:a4761be0533377a1c16ca0c552c0d383">Hugo Metadata in Content Files</h2>
+
+<p>To ensure a proper rendering of the website content, each document in the <code>contentdir</code> should include at the top a metadata section. That metadata section is called a <a href="http://gohugo.io/content/front-matter/">front matter</a>, and should be written in YAML, TOML or JSON format. The front matter tells <em><strong>Hugo</strong></em> some details of how to render the content file. For example, the following front matter is included in the SOS WSDD file:</p>
+
+<pre><code>+++
+draft = false
+title = &quot;IOOS SOS v1.0 WSDD&quot;
+description = &quot;IOOS SOS v1.0 Web Service Description&quot;
+type = &quot;post&quot;
+sidebar = true
+date = 2014-08-04T08:09:56Z
+weight = &quot;1&quot;
++++
+</code></pre>
+
+<p>In the following example of the front matter, the line <code>url = &quot;index.html&quot;</code> instructs <em><strong>Hugo</strong></em> that this file should be rendered as a home page:</p>
+
+<pre><code>+++
+weight = &quot;0&quot;
+type = &quot;post&quot;
+draft = false
+sidebar = true
+Title = &quot;ABOUT: Biological Data Enrollment Process&quot;
+date = 2014-08-04T07:56:39Z
+url = &quot;index.html&quot;
++++
+</code></pre>
+
+<p>For a detailed description of the metadata section supported formats and variables refer to the  <em><strong>Hugo</strong></em> <a href="http://gohugo.io/content/front-matter/">Front Matter</a> documentation.</p>
+
+<h3 id="content-and-non-content-menu-in-sidebar:a4761be0533377a1c16ca0c552c0d383">Content and Non-content Menu in Sidebar</h3>
+
+<p>By default, <em><strong>Hugo</strong></em> will put the document title into sidebar document menu. That behavior can be changed with the <code>sidebar = false</code> line in the front matter.</p>
+
+<p>Apart from the content menu entries, the sidebar menu may contain entries that aren’t attached to any document in <code>contentdir</code>. This takes place in the sitewide config file. For example, to add the menu item that links to the video from a Webinar that is hosted somewhere else, the following lines must be added to the sitewide config file (<code>name</code> and <code>url</code> are mandatory while <code>weight</code> and <code>identifier</code> are optional):</p>
+
+<pre><code>[[menu.extramedia]]
+    name = &quot;Webinar: IOOS Biological Data Enrollment Process (video)&quot;
+    url = &quot;https://mmancusa.webex.com/mmancusa/ldr.php?RCID=a08a97a20c0328828c0bc2f4e07f0fa2&quot;
+    weight = -110
+    identifier = &quot;video&quot;
+</code></pre>
+
+<p><em><strong>NOTE:</strong></em></p>
+
+<blockquote>
+<p>The original templates from <a href="https://github.com/tummychow/lanyon-hugo"><em><strong>Lanyon</strong></em></a> theme have been modified to allow adding items to the <code>extramedia</code> menu. Adding other non-content menus will require further modification of the <code>.\layouts\partial\sidebar.html</code> template.</p>
+</blockquote>
+
+<p>For more detailed information on menus definition, refer to a <a href="http://gohugo.io/extras/menus/">corresponding part</a> of <em><strong>Hugo</strong></em> documentation.</p>
+
+<h1 id="workflow-for-ioos-documentation-website-deployment-on-github:a4761be0533377a1c16ca0c552c0d383">Workflow for IOOS Documentation Website deployment on GitHub</h1>
+
+<p>The  <em><strong>Hugo</strong></em> IOOS DMAC Documentation website can be created from any GitHub documentation repository by following a few simple procedures below.</p>
+
+<h2 id="create-and-debug-a-hugo-site:a4761be0533377a1c16ca0c552c0d383">Create and Debug a Hugo Site</h2>
+
+<ol>
+<li>Clone the repository from <code>github.com/IOOS</code>, or create the repository in the local directory.</li>
+<li>Copy the files from IOOS Hugo Skeleton into the local repository directory.</li>
+<li>Copy or move the Markdown files into <code>./content</code> directory, and all images into <code>.static/images</code> directory.</li>
+<li>Edit the <code>./config.toml</code> file as needed to fit the project. Set up <code>baseurl = &quot;http://ioos.github.io/repository-name&quot;</code>.</li>
+<li>Add front matter to each Markdown document in the <code>./content</code> directory, and edit documents as needed.</li>
+<li>Edit <code>./layouts/index.html</code> template and other templates in <code>./layouts</code> directory as needed to fit the project.</li>
+<li>Edit the <code>./README.md</code> file as needed to fit the project.</li>
+<li>Run <em><strong>Hugo</strong></em> with options in the local repository root directory: <strong><code>hugo server --watch</code></strong></li>
+<li>Repeat steps 5 to 7 as needed to produce the satisfactory looking website.</li>
+</ol>
+
+<p>The command <em><strong>hugo server &ndash;watch</strong></em> starts a web server available at &ldquo;<strong><a href="http://localhost:1313/repository-name/">http://localhost:1313/repository-name/</a></strong>&rdquo;, generates website content in the <code>./public</code> directory,  watches source files for changes, recreates the web content as needed, and automatically reload any open pages in browser. After the website development and debugging is completed, the final version of the site should be deployed on GitHub Pages.</p>
+
+<h2 id="deploy-the-site-to-github-pages:a4761be0533377a1c16ca0c552c0d383">Deploy the Site to GitHub Pages</h2>
+
+<p>GitHub Pages will serve up a website for any project repository that has a branch called <code>gh-pages</code> with a valid <code>index.html</code> file at that branch&rsquo;s root. For the organization/user repository (e.g. <code>ioos.github.io</code>), however, the GitHub Pages serve content of the <code>master</code> branch itself. That may make a deployment of the generated website to GitHub a convoluted process, and unnecessary clutter up the default and deploy repository branches.</p>
+
+<p>A simple and visual deployment workflow based on the <em><strong>Hugo&rsquo;s</strong></em>  <a href="http://gohugo.io/tutorials/github_pages_blog/">&ldquo;<em>Hosting on GitHub Pages</em>&ldquo;</a> tutorial helps untangle the deployment process, and keep an adequate separation between the default and deploy branches. The workflow allows a direct push of the entire content of the generated website to the correct remote repository&rsquo;s branch. It does not stipulate for the commit of generated files to the remote default branch, does not make superfluous commits or deploys when the generated files do not change, and allows keeping a linear history on the deploy branch.</p>
+
+<p>The core element of the workflow is the Bash <a href="https://github.com/X1011/git-directory-deploy">script</a> <code>deploy.sh</code> that renders automatic the deployment process apart from generating the website with <em><strong>Hugo</strong></em>: it creates a deploy branch of the remote repository, and commits the website content to it. Although the script requires some initial configuration, the IOOS documentation GitHub Pages are so simple and highly similar that it can be used for each of them without any modification; each repository includes the pre-configured copy of the script.</p>
+
+<p>With this script, the deployment process can be reduced to a few steps:</p>
+
+<h3 id="configuration:a4761be0533377a1c16ca0c552c0d383"><em>configuration</em></h3>
+
+<p>Edit the following variables within the script as needed to fit the project:</p>
+
+<ul>
+<li><code>deploy_directory</code>: root of the tree of files to deploy; must match the value of the <code>publishdir</code> in the <a href="#toc_3">site config file</a>. For IOOS websites the value is always <code>public</code>.</li>
+<li><code>deploy_branch</code>: branch to commit files to and push to origin. For projects the value is <code>gh-pages</code>.</li>
+<li><code>default_username</code>, <code>default_email</code>: identity to use for git commits if none is set already. Usually no need to set up.</li>
+<li><code>repo</code>: repository to deploy to (must be readable and writable). If script runs in the <code>repo</code> root directory, the variable sets up automatically.</li>
+</ul>
+
+<h3 id="setup:a4761be0533377a1c16ca0c552c0d383"><em>setup</em></h3>
+
+<p>Ensure configuration variables are correct in the script and run</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  <em><strong>deploy.sh -s</strong></em></p>
+
+<p>Option <code>-s</code> or <code>--setup</code> makes the script perform one-time setup to prepare the repository for deployments: creates <code>deploy_branch</code> (i.e. <code>gh-pages</code>), initializes it with the contents of <code>deploy_directory</code> (i.e. <code>public</code>), and pushes it to remote repository.</p>
+
+<h3 id="run:a4761be0533377a1c16ca0c552c0d383"><em>run</em></h3>
+
+<p>Do the following every time you want to deploy:</p>
+
+<ul>
+<li>check out the <code>master</code> branch or commit of the source (useful if somebody else might make changes to the source that you are not aware of). The script will use this commit to generate a message when it makes its own commit on the deploy branch.</li>
+<li>run <em><strong>Hugo</strong></em> without options to generate the files in <code>deploy_directory</code> (i.e. <code>publish</code>).</li>
+<li>make sure no uncommitted changes left in git&rsquo;s index, otherwise the script will abort. Although it is OK to have uncommitted files in the work tree as the script does not touch the work tree, it is strongly recommended to commit and push all changes to the remote default branch before running the script.</li>
+<li>make sure you are in the project&rsquo;s root directory</li>
+<li>run <code>deploy.sh</code> with or without any of the following options:
+
+<ul>
+<li><code>-v</code> or <code>--verbose</code> echo commands as they are executed; it is recommended for debugging if something goes wrong;</li>
+<li><code>-e</code> or <code>--allow-empty</code> allow deployment of an empty <code>public</code> directory (by default, the script will abort if <code>deploy_directory</code> is empty).</li>
+</ul></li>
+</ul>
+
+<p><em><strong>NOTES:</strong></em></p>
+
+<blockquote>
+<ol>
+<li>To allow running Bash scripts on Windows, some Bash shell software for Windows has to be installed. For example, Bash shell is included into a standard <a href="https://windows.github.com/">GitHub for windows</a> installation package.</li>
+<li>The above procedure assumes that the script runs from the site <code>&lt;root&gt;</code> directory, i.e. the directory, where the <code>content</code> (or another directory defined as <code>contentdir</code>) and <code>layout</code> sub-directories are located).</li>
+<li>As GitHub Pages render the organization/user sites in a different way, the <code>deploy_branch</code> value for the <code>ioos.github.io</code> repository must be <code>master</code> instead of <code>gh-pages</code> (for the same reason, a <code>new-website</code> branch has been set up as the default working branch instead of <code>master</code>). To avoid confusion,  the name of the pre-configured script for the <code>ioos.github.io</code> site has changed to <code>deploy-io.sh</code>.<br /></li>
+</ol>
+</blockquote>
+
+</div>
+
+
+
+
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+  </body>
+</html>
+
